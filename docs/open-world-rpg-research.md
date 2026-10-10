@@ -217,7 +217,33 @@
 - 소리·진동·화면 효과 조합과 카메라 흔들림·줌이 타격감과 템포에 영향. (C)
 - 스카이워드 소드의 적 표현 과장 등 읽기 쉬움 사례는 젤다 문서 참고.
 
-**[제안]** 신뢰할 만한 근거를 위해 18장에서 《Game Feel》, GDC 전투 발표, 특정 게임의 전투 인터뷰를 따로 조사한다.
+### 8.1 보강: 게임 필(Game Feel)의 정의 (2차 조사)
+- 스윙크(2009, 《Game Feel》)의 정의: "시뮬레이션된 공간 속 가상 객체의 **실시간 조작**, 상호작용을 **폴리시**(polish)로 강조한 것". 세 요소는 ① 실시간 조작, ② 물리적 상호작용으로 움직임의 맥락을 주는 시뮬레이션 공간, ③ 시뮬레이션 자체는 바꾸지 않고 상호작용의 인지를 높이는 폴리시(아트, 사운드, 애니메이션). (A, 서베이 논문 인용)
+- 좋은 게임 필이 주는 경험 다섯 가지 중에 조작의 미적 감각과 정체성의 확장이 있다. 나머지 항목은 확인하지 못했다. (A)
+- 한계: 후속 연구자들은 이 정의가 제한적이라고 비판한다 (Pichlmair & Johansen 서베이). 굿리즈 소개문의 "여섯 가지 핵심 요소"는 목록을 확인하지 못했다. (A/C)
+
+### 8.2 보강: 타격감(Impact Feel)의 실증 연구
+- Lin 등(2022, arXiv 2208.06155): 스팀 상위 판매 액션 게임의 플레이어 코멘트를 수집하고 NLP 모델로 타격감 순위를 매겨 **19개 특징의 타격 피드백 설계 틀**을 만들었다. 상위 8개와 하위 8개 게임을 비교했다. (A)
+- 핵심 결론: **히트스톱, 사운드 일관성, 카메라 제어**가 타격감에 크게 영향을 준다. 셋 중 하나라도 의도적으로 설계하지 않으면 타격감이 망가질 수 있다. (A)
+- 히트스톱 0.05~0.1초, 플래시 50~100ms 같은 수치는 블로그 조언이며 논문에서는 확인하지 못했다. (C)
+
+### 8.3 보강: 소울류 전투 설계
+- 공격이 한 번 시작되면 취소할 수 없고, 예비동작(anticipation)과 후딜(recovery) 동안 취약해지는 것이 위험-보상의 구조다. (GDKeys, B)
+- 읽기 쉬운 애니메이션과 예고되는 게임 상태가 플레이어가 적 패턴을 학습하는 첫 단계다. (B)
+- 다크 소울 3 비판 분석(Game Developer): 포이즈를 꺼 놓으면 PvP가 "누가 더 빨리 때리느냐"가 되고, 스태미나가 방패를 내린 때만 회복되어 다단 콤보가 방어를 뚫는다. (B)
+- 스태미나 시스템이 둔하게 느껴지고, 재미있게 튜닝하면 존재 이유가 사라진다는 인디 개발자 기록. (C)
+- **세키로**: 체력 옆에 **자세(posture) 게이지**를 두어 막기·튕기기로 적의 자세를 깎아 처형한다. 다크 소울의 인내·방어와 달리 공격성을 보상한다. (B)
+- 미야자키(Game Informer): 공격과 방어의 관계가 훨씬 유동적이고 능동적이며, 블러드본부터 생각해 온 것이고, 세키로가 전환점이었다. "한 단계 더 끌어올릴 수 있다"고 밝혀 다음 작품에서 이 메카닉을 다듬겠다는 뜻을 비쳤다. (A)
+- 난이도는 의도된 것이라는 평론. (B)
+- 몬스터 헌터 같은 행동 확정형 전투와의 비교는 확인하지 못했다.
+
+### 8.4 보강: 위쳐 3 전투에 대한 평가
+- 현실성에 기반한 설계를 옹호하지만 "불필요하게 화려하고 비실용적인 피루엣이 많다"(릭 레인). 방패 든 적은 검만으로 상대하기 어려워 반격을 기다리거나 사인으로 무력화해야 한다. (B)
+- 전작 대비 3편은 퀵스텝이 위치·타이밍·전술 인식·준비를 보상한다는 평(Shamus Young). 2편은 거의 계속 구르기였다. (B)
+- 출시 때 평가는 갈렸다: "제 역할은 하지만 그 이상은 아니다"(GameBanshee), 출시 전 RPS는 "치고 베고 돌고 피하고 반복"이라 우려. 커뮤니티는 "구르기→마법→근접 1타 반복"이라는 비판과 "퀸을 쓰지 말고 머리를 쓰라"는 옹호로 갈린다. (B/C)
+- 스킬 트리가 다양성이 부족해 기본 공격에 머무른다는 지적은 9.2 참조.
+
+**[제안]** 전투 설계의 검증된 틀은 이번에도 부족하다. 신뢰할 만한 근거를 위해 18장에서 GDC 전투 발표, 몬스터 헌터·소울류 개발자 인터뷰를 따로 조사한다. 타격감은 히트스톱·사운드·카메라 세 가지를 초기에 의도적으로 설계 항목으로 둔다(8.2).
 
 ---
 
@@ -226,14 +252,32 @@
 ### 9.1 레벨 스케일링
 - 오블리비언: 적이 플레이어 레벨에 맞춰 스케일링되어 성장 체감이 약해지고, 적이 비례가 아니라 기하급수로 강해지며, 스킬 포인트를 잘못 쓰면 일부 적이 매우 어려워진다는 비판. 모로윈드는 레벨이 등장 적 종류만 조절했다. (B/C)
 - 대안: 고정 레벨 적 (Nehrim 모드, 이후 스카이림). 옹호: 규모가 큰 게임에는 스케일링이 좋은 아이디어이며 문제는 실행. 스카이림이 균형이 낫다는 평. (C)
-- 위쳐 3, 엘든 링의 난이도 설계 비교는 확인하지 못했다.
+- 오블리비언 스케일링을 원 개발자 중 한 명이 실수라고 불렀다는 인용(커뮤니티 코멘트 경유, 직접 출처 미확인). (C)
+- 위쳐 3: 패치 1.07에서 일부 장비의 착용 레벨 요구가 공지 없이 올라갔다(예: 강화 우르신 갑옷 22→25, 고양이 갑옷 일부 19→23). 플레이어가 만들어 둔 검을 착용하지 못하는 일이 생겼다. CDPR이 1.08에서 인정하고 한 시간 동안 모든 장비 레벨 요구를 낮추는 '늑대의 시간' 물약으로 보완. 적 레벨 스케일링의 설계 근거는 확인하지 못했다. (A/B)
+- [제안] 이미 가진 장비의 요구 조건을 사후에 올리면 플레이어 신뢰를 해친다는 사례로 읽을 수 있다 (해석).
+- 엘든 링의 난이도 설계는 4.5절과 위 9.2.2 외에 확인하지 못했다.
 - [제안] 월드 지역마다 고정 위험도를 두면 "다시 와서 강해진 나를 확인"하는 보상이 생긴다. 스케일링을 쓰려면 성장 체감 방식을 별도로 설계한다.
 
 ### 9.2 스킬 트리
 - 리스펙: 가능하되 비용이 있어야 한다. 비용이 높으면 불안, 너무 싸면 선택이 비인격적. 리스펙을 강요하는 콘텐츠로 긴장을 강점으로 바꿀 수 있다는 의견. 반대로 리스펙이 자유로우면 영구성이 없어진다는 비판도 있다. (C)
 - 노드 대부분이 작은 수치 증가면 생각 없이 클릭한다. 새 선택지를 열거나 체감되는 수치를 바꿔야 한다. 메카닉 기반 업그레이드가 퍼센트 보너스보다 낫다. 위쳐 3 전투 트리는 기본 공격에 머무르게 되는 사례로 지적. (C)
 - 트리 형태: 선형 = 따라가기 쉬움, 분기 = 전문화, 그리드(Path of Exile) = 거대한 창의성이지만 압도적. 키스톤(keystone)이 기이한 빌드를 허용. 스카이림은 최소 기능에 가깝다는 의견. 중형 게임에 15~40 노드가 적당하다는 경험칙. (C)
-- 스카이림 퍽, 엘든 링 빌드 구조는 확인하지 못함.
+- 스카이림 퍽, 엘든 링 빌드 구조는 아래 보강 참조.
+
+#### 9.2.1 보강: 스카이림 (토드 하워드 발언)
+- 오블리비언의 8개 속성을 없앤 이유: 각 속성이 파생 수치로 이어지는 구조였기 때문에, 이제 지력을 올리는 대신 마나를 직접 올린다. (A)
+- 스킬은 사용으로 오르고, 각 스킬 상승이 캐릭터 레벨에 기여하므로 많이 쓰는 스킬이 레벨을 가장 빠르게 올린다. (A)
+- 초반 레벨업을 빠르게 한 이유는 퍽에 일찍 도달하게 하려는 것이다. "힘은 퍽에서 나온다." (A)
+- 무기 스킬을 한손, 궁술 같은 넓은 범주로 묶고 그 안에 둔기·도끼·검 같은 세부 무기용 전문화 퍽을 둬서 선택지와 균형을 높였다. (A)
+- 레벨마다 퍽 하나와 능력치 증가가 주어진다. (B)
+- 퍽 시스템 자체에 대한 구체적 비판은 이번 검색에서 확인하지 못했다. 속성 제거가 "복잡성 한 겹을 잃은 것"이라는 시각은 IGN 프레이밍으로만 확인된다. (B)
+
+#### 9.2.2 보강: 엘든 링 스탯
+- 스탯 상한 99, 소프트 캡을 넘으면 레벨당 이득이 줄어든다. 예: 활력(Vigor)은 40레벨에서 39→40 때 HP +48, 40→41 때 +26. (B/C, 가이드)
+- 스탯마다 소프트 캡이 여러 개: 활력 40/60, 정신력 50/57/60, 힘·민첩 20/55/80, 지구력 15/30/50, 신비 보정 30/45 등(가이드 표). 지능·신앙·신비의 스케일링은 공격/주문별로 다르다. 확장팩 장비는 구간이 또 다르다. (C)
+- 출처 간 수치가 충돌(예: 소프트 캡 레벨 55~60, 하드 캡 약 120)하며 캐릭터 레벨과 스탯 레벨을 혼동한 글이 있어 **수치 인용 금지, 구조(다단계 소프트 캡)만 참고**. (C)
+- 무기 스케일링과 전투 기술(Ashes of War)은 확인하지 못했다.
+- [제안] 소프트 캡은 "초반은 한 스탯에 몰아줘도 되지만 갈수록 분산이 이득"이 되게 해서 **빌드 결정의 시점을 늘리는** 도구로 읽힌다 (해석, 개발자 발언 아님).
 
 ### 9.3 루팅과 보상 심리
 - 가변 비율 강화 스케줄은 반응률이 높지만 비디오게임에서는 선호되지 않을 수도 있다는 실험 연구(프린스턴 보고서, MIT 논문). (A)
@@ -241,7 +285,10 @@
 - 희귀도 색상 등급이 지각된 가치를 만든다. 블리자드 디자이너가 "사실상 슬롯머신"을 만들었다고 인정했다는 2차 인용(주의). (C)
 - 균형: 좋은 전리품이 너무 쉬우면 무의미해지고 너무 어려우면 좌절. 블리자드가 텔레메트리로 가정과 실제를 점검. 디아블로 3 현금 경매장이 루팅 동기를 해쳤다는 주장 (AI 스킬 문서 출처, 주의). (B/C)
 - 로타 박스 규제 논의와 연결되므로 가변 보상 설계는 윤리·법적 이슈를 함께 점검해야 한다. (B)
-- 디아블로 접두사·드롭 테이블 세부는 확인하지 못함.
+- **디아블로 3 루트 2.0 (케빈 마르텐스)**: 즉시 구매는 이 게임의 핵심 판타지가 아니다. 엔드게임에서 플레이어가 경매장을 먼저 확인하고 게임을 나중에 하는 경향이 있었다. 마법 부여와 새 전설 아이템이 갖춰지자 경매장을 없애도 보상 곡선 문제가 해결되고 새로운 거래 사기도 없으며 재미있는 장비가 부족하지 않으리라 판단했다. 목표는 "몬스터를 죽이고 게임 안에서 최고의 아이템으로 보상받는" 디아블로 3의 본질을 지키는 것. (A, Engadget·GameBanshee 인터뷰)
+- 콘솔 판은 "루트 1.5", PC는 "루트 2.0"이라 부른다. (A)
+- 트래비스 데이: 루트 2.0의 핵심 디자이너. 확장팩 패널에서 대균열, 전설 보석, 고대 아이템, 세트, 거래, 엔드게임 빌드 가능성을 다뤘다. 루트 관련 발언 원문은 확인하지 못했다. (B)
+- 접두사 롤링·드롭 테이블의 세부는 확인하지 못함.
 
 ### 9.4 진행감 설계 [제안]
 - 매 구간 "이전에는 못 하던 것을 이제 할 수 있다"는 능력 해금(젤다 문서의 아이템 게이팅·이동기)과 수치 성장을 함께 쓴다.
@@ -256,7 +303,20 @@
 - 화폐가 제작 재료도 겸하게 하는 Path of Exile 방식. (C)
 - 실제 돈이나 지름길로 힘을 살 수 있으면 힘을 찾는 의미가 사라진다. (C)
 - 화폐 풀마다 stock-flow 모델을 만들어 감이 아니라 모델링으로 설계하라는 조언. (C)
-- 모든 항목이 블로그/AI 스킬 문서이므로 **검증이 필요**하다. 싱글 플레이어 RPG 경제의 사례 분석(위쳐 3, 스카이림)은 확인하지 못했다.
+- 위 항목은 블로그/AI 스킬 문서이므로 **검증이 필요**하다.
+
+### 10.1 보강: 싱글 플레이어 RPG 경제 사례
+- **에릭 슈워츠 (Gamasutra, 2013)**: 경제 문제는 개발자의 명백한 실수라기보다 **선의로 추가한 기능의 의도치 않은 부작용**에서 나오고 방치된다. (A)
+  - 무한 돈줄은 쉽거나 보상이 크면 마찰을 감수하고 악용된다. (A)
+  - 돈이 의미를 가지려면 공짜로 얻는 물건 경로를 줄여 진행하려면 사야 하게 만들 것. (A)
+  - 영구 업그레이드는 과대평가되기 쉬우니 영구 무기 대신 "10분간 +5 공격" 같은 임시 효과로 바꾸라는 제안. (A)
+  - 원문 전체는 확인하지 못했고 GameBanshee 재게재본의 발췌만 확인했다.
+- **위쳐 3**: 후반부에 금과 전리품이 너무 많고 자신의 장비보다 좋은 아이템이 거의 나오지 않아 의미가 사라진다는 모드 제작자의 지적(마을 전리품 감소, 상인이 선택된 고가 아이템만 매입하는 모드). 개발자 발언은 없음. (C)
+- **스카이림/오블리비언**: 필요한 거의 모든 것을 루팅이나 제작으로 얻어 골드가 거의 필요 없다는 평. 상인에게는 아이템별 매입 한도가 있다. 소매치기 AI는 악용 가능한 소득원이었다는 사례(슈워츠 글). (B/C)
+- **킹덤 컴: 디라이버런스**: 시체를 약탈해 수천 그로셴짜리 판금 갑옷을 얻을 수 있어 돈을 모을 이유가 없다는 플레이어 불만. 개발 측 포럼 답변 중 음식 부패와 숙박을 싱크로 쓰자는 제안이 있으나 설계 의도로 확인된 것은 아니다. (C)
+- 반복되는 교훈: ① 후반에도 쓸 곳이 계속 있어야 돈이 의미 있다 ② 전리품이 상점 물건을 압도하면 돈과 쇼핑이 무의미하다 ③ 소모품·유지비·숙박 같은 싱크 ④ 상인 한도 ⑤ 루팅·소매치기 같은 추가 기능이 경제를 깨뜨린다. (B/C)
+- 옵시디언 포럼에서는 스토리 중심 RPG에 경제가 필요한지 자체를 묻는 반론도 있다. (C)
+- 싱글 플레이 RPG 경제를 다룬 권위 있는 1차 분석은 이번에도 확인하지 못했다.
 
 ---
 
@@ -300,7 +360,13 @@
 - HLOD는 월드 파티션이 큰 섬/월드를 지원하는 두 축 중 하나(스트리밍과 함께). (A)
 - 나나이트 콘텐츠의 HLOD는 메시 단순화보다 인스턴스 병합에 집중해야 한다는 서드파티 주장 (공식 문서 미확인). (C)
 - 지형 규모: 오래된 UE 4.8 시절 GDC 데모(1m 해상도 약 16,000×16,000 버텍스, 4×4 스트리밍 레벨). 약 20km를 넘으면 부동소수점 정밀도 문제. (C, 역사적 자료)
-- 나나이트 한계, 월드 파티션 셀 로딩 동작, 트래버설 스터터(셰이더 컴파일/스트리밍)는 확인하지 못함.
+- **대형 좌표(LWC)**: 언리얼 5는 코어 데이터 타입에 64비트 double을 도입해 더 큰 월드와 정확한 액터 배치를 가능하게 한다. 현재 문서 기준 기본 WORLD_MAX는 8,800만 km, 월드 경계 체크는 유지된다. UE5.0 시절 기본은 UE4의 약 21km였다(LWC가 베타였기 때문). `UE_USE_UE4_WORLD_MAX`로 21km로 되돌릴 수 있다. Epic은 큰 한도가 미래 버전에서 바뀔 수 있고 안정성 문제가 있을 수 있다고 경고한다. 기존 프로젝트는 정밀도 손실 엣지 케이스가 생길 수 있어 변환 가이드를 따라야 한다. (A, Epic 공식 문서; 버전별로 재확인 필요)
+- **셰이더 스터터**: UE 5.2부터 PSO 사전 캐싱이 PSO가 준비되지 않은 오브젝트를 그리지 않는 방식으로 컴파일 중 히치를 피한다. Epic은 이 시스템이 완벽하지 않다고 명시한다. UE 5.5 기준 전역 컴퓨트 셰이더는 사전 캐싱되지만 전역 그래픽스 셰이더는 아니라서 처음 쓸 때 드문 히치가 생길 수 있다. 드문 상태의 PSO 건너뛰기로 일부 히치가 남을 수 있다. 기존 방식(번들 PSO 캐시)과 병행을 권장한다. (A, Epic 문서·기술 블로그)
+- **나나이트·루멘 식생**: 5.2 릴리스 노트에 모든 식생의 서피스 캐시 바이어스를 올렸다는 항목이 있다(나무의 SDF/BVH 표현이 부정확해서). 식생 투명도 같은 나나이트 한계는 확인하지 못했다. (A)
+- **스트리밍 사례**: 인썸니악의 선셋 오버드라이브(GDC 2015, Elan Ruskin 발표)는 실내 슈터 엔진의 에어록 로딩을 빠르게 이동하는 플레이어 주변에서 도시 블록 전체를 스트리밍하는 방식으로 바꾼 과정과 함정, 설계에 미친 영향을 다룬다. GDC Vault 본문은 회원 전용이라 내용은 확인하지 못했다. (B)
+- 인썸니악 절차적 콘텐츠: GDC 2024 "스파이더맨 2: 10년간의 절차적 콘텐츠 제작"과 GDC 2021(마일스 모랄레스, 래치 앤 클랭크 하우디니 활용)이 있다. 본문은 미확인. (B)
+- 월드 파티션 셀 로딩 동작과 트래버설 스터터의 구체적 사례는 이번에도 확인하지 못했다. 호라이즌 포비든 웨스트 스트리밍도 미확인.
+- [제안] 위 Epic 문서의 한도·스터터 항목은 **엔진 버전마다 달라질 수 있으니** 프로젝트 시작 시점의 버전 문서로 재확인한다.
 
 ### 13.2 절차적 배치
 - 4.6 참조 (호라이즌 제로 던 GPU 기반 런타임 배치).
@@ -440,11 +506,11 @@
 ## 18. 확인하지 못한 영역과 추가 조사 계획
 
 ### 18.1 미조사/불충분
-1. 전투 설계: 《Game Feel》, GDC 전투 발표, 개별 게임 인터뷰 (8장)
-2. 캐릭터 성장: 스카이림 퍽, 엘든 링 스탯, 위쳐 3 난이도 비교 (9장)
-3. 경제: 싱글 플레이 RPG 사례, 위쳐 3·스카이림 (10장)
+1. 전투 설계: 《Game Feel》 본문, GDC 전투 발표, 몬스터 헌터 등 행동 확정형 전투, 위쳐 3 개발자 발언 (8장; 8.1~8.4에서 2차 보강했으나 1차 자료는 미확인)
+2. 캐릭터 성장: 스카이림 퍽 시스템에 대한 비판 분석, 엘든 링 무기 스케일링·전투 기술, 위쳐 3 적 레벨 스케일링 설계 근거 (9장; 9.2.1~9.2.2에서 부분 보강)
+3. 경제: 슈워츠 글 전문, 싱글 플레이 RPG 경제의 개발자 분석 (10장; 10.1에서 부분 보강)
 4. 월드 설계 정량 데이터: 개별 게임의 POI 간격, 밀도 (4.2)
-5. 기술: 나나이트 한계, 월드 파티션 셀 로딩, 스터터 원인, 이동 속도와 스트리밍 설계 (13장)
+5. 기술: 나나이트 한계(식생·투명도·스켈레탈), 월드 파티션 셀 로딩 동작, 트래버설 스터터 사례, 호라이즌 포비든 웨스트 스트리밍 (13장; 13.1에서 LWC·PSO만 보강)
 6. 서사: 위쳐 3·사이버펑크 10가지 교훈 전체, 서사 구조(분기), 대화 시스템
 7. 사운드: GDC 오디오 발표 원문 (12장)
 8. 유저 이탈·리텐션 데이터: 스팀 업적 통계, HowLongToBeat 통계
@@ -548,6 +614,37 @@
 - [Wikipedia: Music of RDR2](https://en.wikipedia.org/wiki/Music_of_Red_Dead_Redemption_2)
 - [Audiokinetic: Witcher 3 audio](https://www.audiokinetic.com/en/blog/the-witcher-3-wild-hunt-game-audio-wwise-tour)
 - [Linguistic Frontiers: open world sound](https://journals.upol.cz/lingfrontiers/article/view/647)
+
+**보강 조사(전투·성장·경제·기술)**
+- [Pichlmair & Johansen: Designing Game Feel survey](https://arxiv.org/pdf/2011.09201)
+- [Wikipedia: Game feel](https://en.wikipedia.org/wiki/Game_feel)
+- [Lin et al.: What Features Influence Impact Feel?](https://arxiv.org/pdf/2208.06155)
+- [Game Developer: Dark Souls 3 design](https://www.gamedeveloper.com/design/the-successes-and-failures-of-dark-souls-3-s-design)
+- [GDKeys: Anatomy of an Attack](https://gdkeys.com/keys-to-combat-design-1-anatomy-of-an-attack/)
+- [Game Design Skills: combat design](https://gamedesignskills.com/game-design/combat-design/)
+- [Super Jump: Sekiro combat](https://www.superjumpmagazine.com/the-art-and-science-of-sekiros-combat/)
+- [PC Gamer: Miyazaki on Sekiro](https://www.pcgamer.com/games/adventure/sekiro-was-a-big-turning-point-after-elden-ring-hidetaka-miyazaki-says-theres-one-more-level-we-can-crank-it-up-to/)
+- [VideoGamer: Miyazaki sharpening combat](https://videogamer.com/news/miyazaki-sharpen-bloodborne-sekiro-combat-philosophy)
+- [GameBanshee: Witcher 3 combat](https://gamebanshee.com/kwaac)
+- [Shamus Young: Witcher 3](https://www.shamusyoung.com/twentysidedtale/?p=42424)
+- [Bandai Namco: Elden Ring advanced stats](https://www.bandainamcoent.com/news/elden-ring-introduction-part-2-advanced-stats)
+- [GGRecon: Elden Ring stats](https://www.ggrecon.com/guides/elden-ring-stats-explained/)
+- [VideoGamer: Elden Ring soft caps](https://videogamer.com/guides/elden-ring-soft-caps)
+- [GameBanshee: Five changes Oblivion to Skyrim](https://gamebanshee.com/k638)
+- [GameBanshee: Skyrim commentary round-up](https://gamebanshee.com/k63r)
+- [Shacknews: Witcher 3 patch 1.08](https://shacknews.com/article/90607/the-witcher-3-108-patch-notes-released)
+- [GamePro: Witcher 3 patch 1.07](https://www.gamepro.de/artikel/witcher-3-patch-107-mit-versteckten-aenderungen,3233781.html)
+- [Engadget: Diablo 3 loot 2.0](https://www.engadget.com/2013-08-29-diablo-iii-reaper-of-souls-loot-designed-to-make-auction-house.html)
+- [GameBanshee: Diablo 3 RoS interview](https://gamebanshee.com/hyc6)
+- [GameBanshee: An Economy is You](https://gamebanshee.com/9yc6)
+- [Nexus: Witcher 3 economy mod](https://www.nexusmods.com/witcher3/mods/782)
+- [Epic: Large World Coordinates](https://dev.epicgames.com/documentation/en-us/unreal-engine/large-world-coordinates-in-unreal-engine-5)
+- [Epic: LWC conversion guidelines](https://dev.epicgames.com/documentation/en-us/unreal-engine/large-world-coordinates-project-conversion-guidelines-in-unreal-engine-5)
+- [Epic: UE 5.2 release notes](https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-5.2-release-notes)
+- [Epic tech blog: shader stuttering](https://www.unrealengine.com/tech-blog/game-engines-and-shader-stuttering-unreal-engines-solution-to-the-problem)
+- [80.lv: UE5 shader stuttering](https://80.lv/articles/epic-games-devs-on-solutions-to-unreal-engine-5-shader-stuttering-issues)
+- [GDC Vault: Streaming in Sunset Overdrive](https://gdcvault.com/play/1022268/Streaming-in-Sunset-Overdrive-s)
+- [GDC 2024: Spider-Man 2 procedural content](https://schedule.gdconf.com/session/marvels-spider-man-2-10-years-of-procedural-content-creation/900288)
 
 **기술·제작·출시 후**
 - [Unreal: World Partition](https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine)
