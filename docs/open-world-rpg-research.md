@@ -555,7 +555,14 @@
 ### B.3 현지화·음성·대사량
 - 발더스 게이트 3: 기네스 기록상 대본 2,503,837단어, 그중 약 212만이 캐릭터 대화. 음성 캐릭터 500명 이상, 성우 240명 이상. 라리안 디렉터가 GDC에서 136만 5천 단어, 컷신 약 140시간이라고 말했다는 보도(Gfinity)와 수치가 다른데, 인터페이스·아이템 설명 포함 여부 등 집계 방식 차이로 보인다. (A/B)
 - 위쳐 3 대사량은 신뢰할 수 없는 출처(약 50만 단어)뿐이다. 디스코 엘리시움은 약 100만 단어라는 사용자 글. (C)
-- **현지화 예산, 성우 단가, 모션/퍼포먼스 캡처 비용은 확인하지 못했다.**
+- **현지화 비용 (업체 자료 위주, 지표로만 사용)**
+  - 번역 단가: 대부분 출처가 언어당 원문 1단어에 약 0.10~0.18달러. 다른 가이드는 유럽 주요 언어 0.08~0.15달러, CJK 등 복잡한 문자 언어 0.12~0.20달러. 가격 계산기는 0.07~0.30달러, 프랑스어·독일어·스페인어·중국어 정가는 최대 0.25달러까지. 2018년 글은 0.07~0.15로 더 낮다. 청구액은 언어 수보다 **단어 수**가 좌우한다는 지적. (C)
+  - 예산 예시: 4만 단어 RPG를 8개 언어로 번역하면 텍스트만 약 5.76만 달러, 엔지니어링 포함 6~7.5만 달러. 10만 단어 RPG를 5개 언어로 번역하면 5~9만 달러. (C)
+  - 현지화 QA는 별도 청구: 시간당 30~60달러 또는 35~75달러. (C)
+  - 음성(VO): 인디용 출처가 스튜디오·엔지니어 포함 시간당 250~600달러, 전문 성우를 쓰면 두세 배가 될 수 있다고 한다. 더빙은 문장 수 기준으로 청구하는 모델도 있다. (C, 단일 출처)
+  - 총 개발비 대비 현지화 비중은 신뢰할 수 있는 수치를 확인하지 못했다.
+  - 위 수치는 대부분 현지화 업체 홍보 자료다. **BG3급 대사량(약 250만 단어)에 곱하면 번역만 수십만 달러** 규모라는 산술적 추정은 가능하지만 실제 계약가와 다를 수 있으며 근거가 되는 사례는 찾지 못했다. [제안: 이 추정은 사용 전 업체 견적으로 검증]
+  - 모션/퍼포먼스 캡처 비용은 이번에도 확인하지 못했다.
 
 ### B.4 참고 게임: 킹덤 컴: 디라이버런스 (워호스)
 - GDC 2026 "KCD & KCD2의 수천 NPC 지원"(Petr Smrcek, AI 프로그래머): KCD2는 지도 위 NPC를 4배인 약 2,400명으로 늘리고 절반 정도를 한 도시에 집중시켰다. AI 시뮬레이션의 LOD 기법을 새로 도입하되 스크립팅 인터페이스가 LOD를 최대한 의식하지 않도록 했다. 수천 개의 복잡한 NPC를 60FPS로 시뮬레이션할 수 있고, 초기에 계획과 제한을 확실히 세우는 게 중요하며, 스레드 활용, 표준화된 로직의 코드 이관, 상황별로 걷어낼 것을 아는 것이 도움이 된다고 한다. (A, 세션 초록)
@@ -575,9 +582,25 @@
 ### B.6 참고 게임: 발헤임, 켄쇼
 - **발헤임** (아이언 게이트): 얼리 액세스 때 5명으로 개발, 현재는 16명 중 8명이 발헤임 전담. 출시 20일 만에 스팀 동시 접속 50만 명 이상. 팬데믹 때 친구와 함께할 사회적 게임이 필요했던 시기가 흥행을 도왔다는 평. 가장 어려웠던 순간은 출시 후 접속 급증이었고 개발에 집중하며 계속 나아가기로 했다고 한다. 얼리 액세스 5년 후 1.0 출시. (A/B)
 - 제프 보겔의 외부 분석: 보스 5명이 각각 새로운 금속 광석 접근을 열어 준다. 포털은 이미 방문한 곳으로만 이동할 수 있고, 이동이 위험하고 느리기 때문에 필요한 편의다. Iron Gate의 설명이 아니라 비평가의 해석. (C)
-- 발헤임의 바이옴 진행·보스 게이팅에 대한 개발사 직접 발언은 확인하지 못했다.
+- **발헤임 설계 의도 (보강)**
+  - 헨릭 퇴른크비스트(공동 창립자, PC Gamer): 영감은 일반 서바이벌보다 **젤다·스카이림 같은 싱글 플레이 RPG** 쪽이다. 젤다 BotW와 스카이림을 영감으로 든다. (A)
+  - 리처드 스벤손(CEO): 처음부터 PvE 게임을 만들고 싶었고 PvP 게임보다 BotW 같은 싱글 플레이 모험에서 더 영감을 받았다. (A)
+  - 보스: 새 장비를 보스를 쓰러뜨려 얻는 "젤다 같은 옛날식 싱글 플레이 모험" 느낌을 원했고 서바이벌과 잘 맞으리라 봤다 (GameStar가 전한 PC Gamer 인터뷰). (A/B)
+  - 포털: 시간을 아끼지만 **광석은 가지고 통과할 수 없다.** 서바이벌 요소를 받아들이게 하는 설계 결정. (B)
+  - 바이옴은 바이옴이 작동하는 방식의 설계도(blueprint)가 있었고 신화는 따르는 규칙이라기보다 느슨한 틀이다 (스벤손). 1.0 인터뷰에서 아트 디렉터 로빈 에이레는 바이옴이 처음부터 배치돼 있었고 가장 많이 바뀐 것은 딥 노스라고 말했다. (A)
+  - 비전: 퇴른크비스트는 발헤임이 처음 구상한 게임과 기본적으로 같고 바뀐 건 세부라고 했다. (A)
+  - 저폴리곤 화풍: 최신 하드웨어가 없어도 플레이할 수 있고 에셋 제작 회전이 빠르다 (스벤손). PS1 풍 그래픽에서도 영감을 얻었다는 보도. (A/B)
+  - 퀘스트 마커가 없는 이유에 대한 개발사 직접 설명, 건축 물리 설계는 확인하지 못했다. 진행 구조("지역을 파밍 → 보스용 장비 제작 → 보스 처치 → 다음 지역")는 팬/리뷰어의 요약이다. (C)
 - **켄쇼** (크리스 헌트): 사실상 1인 개발로 약 12년(소스마다 시작 시점이 다름). 야간 경비원으로 일하며 개발. 얼리 액세스 매출로 전업 가능해짐. 스스로 "스카이림과 드워프 포트리스의 중간"이라 표현. 전제는 선택받은 영웅이 아니라 평범한 "아무개"가 살아가려 애쓰는 것. 2013년경 소규모 팀을 고용. 시스템을 자기만 안다고 느껴 통제를 놓는 데 시간이 걸렸다고 한다. (A/B)
-- 켄쇼의 NPC 시뮬레이션·진영 시스템 세부는 확인하지 못했다.
+- **켄쇼 설계 의도 (보강)**
+  - 크리스 헌트(2025 영상, PC Gamer·GamesRadar): "작가의 일은 주인공을 괴롭히는 것"이라는 글쓰기 격언을 플레이어에게 적용한다. 무언가 잘못되는 것이 이야기의 기초이고 플레이어는 시험받는 주인공이다. "너무 많은 게임이 플레이어를 성공하게 해 준다. 그건 내게 정신이 멍해질 만큼 지루하다." (A)
+  - 죽고 다시 시작하는 다크 소울과 달리, 켄쇼의 캐릭터는 패배해도 남은 것을 가지고 계속 나아가며 고투 속에 강해진다. (A/B)
+  - 선택받은 자가 없다: 아무 능력도, 높은 능력치도 없는 평범한 사람으로 시작하고 세계는 플레이어에게 무관심하다. 고정 임무와 스크립트 없이 거의 무한한 목표가 있고, "다른 RPG와의 차이는 **문제가 당신을 찾아온다**는 점". (A/B)
+  - 2014년경: 가장 큰 어려움은 시뮬레이션된 세계의 혼돈(예: 용병이 엉뚱한 집에 들어감)이고, 샌드박스에서 대사가 반복적이어 짜증나지 않게 하는 것도 걱정이었다. (A)
+  - 난이도가 가파르다는 점을 인정하고 신규 플레이어에게 다른 게임을 먼저 해 보라고 권하는 "게이트웨이 게임" 필요성을 언급. 켄쇼 2는 주로 자신을 위해 만들고 숙련자를 주 대상으로 상정한다. (A/B)
+  - 접근성 모드에 대한 입장은 2차 정리 글이라 인용 보류. (C)
+  - NPC 시뮬레이션·진영 시스템 세부는 확인하지 못했다.
+- [제안] 두 게임의 대비: 발헤임은 **보스 게이팅과 제한된 이동**으로 진행을 구조화하고, 켄쇼는 **구조 없이 플레이어를 시험**한다. 몇백 시간 몰입 설계에서 "목표를 누가 정하는가"를 정하는 사례로 쓸 수 있다.
 
 ### B.7 QA·테스트
 - 호라이즌 제로 던 (Guerrilla, GDC): 21개월 테스트 수명주기, 소규모 내부 팀에서 전 세계 70명 이상으로 확장, 수만 시간 투입. 자동화 테스트와 텔레메트리로 탐색 테스트 전략을 결정했다. 리스크 관리, 테스트 전략, 출시 후 지원, 텔레메트리, 리스크 레지스터를 다뤘다. (A, 세션 초록)
@@ -745,6 +768,20 @@
 - [GamesBeat: Valheim 1.0](https://gamesbeat.com/valheim-finally-hits-1-0-after-five-years-in-early-access-interview/)
 - [GameBanshee: Jeff Vogel on Valheim](https://www.gamebanshee.com/ah99q)
 - [Inverse: Valheim devs](https://nc.inverse.com/gaming/valheim-devs-interview-breath-of-the-wild-skyrim)
+- [Transphere: game localization costs](https://www.transphere.com/game-localization-costs/)
+- [GameDevOutsourcing: localization cost guide](https://www.gamedevoutsourcing.com/blog/game-localization-cost-guide)
+- [LocalizeYourApp: game localization cost](https://localizeyourapp.com/blog/game-localization-cost)
+- [Artlangs: localization cost 2025](https://artlangs.com/news-detail/How-Much-Does-Game-Localization-Cost--A-2025-Guide-for-Developers)
+- [Medium: localization cost 2018](https://medium.com/@nikolaybondarenko_41585/how-video-game-localization-works-and-how-much-it-costs-in-2018-664e2748a121)
+- [PCGamesN: Valheim devs on Zelda BotW and PS1 graphics](https://www.pcgamesn.com/valheim/ps1-graphics)
+- [Inverse: Valheim devs interview](https://inverse.com/gaming/valheim-devs-interview-breath-of-the-wild-skyrim)
+- [TheGamer: Valheim Deep North developer interview](https://www.thegamer.com/valheim-deep-north-1-0-developer-interview/)
+- [GameStar: Valheim mehr Rollenspiel als Survival](https://www.gamestar.de/artikel/valheim-mehr-rollenspiel-als-survival,3367142.html)
+- [Steam: Iron Gate fz.se interview (translated)](https://steamcommunity.com/app/892970/discussions/0/4627984302698067987/)
+- [PC Gamer: Kenshi "too many games let players succeed"](https://www.pcgamer.com/games/survival-crafting/too-many-games-let-their-players-succeed-says-developer-of-notoriously-tough-survival-rpg-kenshi-and-thats-mind-numbingly-boring-to-me/)
+- [GamesRadar: Kenshi developer](https://www.gamesradar.com/games/survival/brutal-survival-game-kenshi-developer-says-too-many-games-let-the-player-succeed-which-is-mind-numbingly-boring/)
+- [GameDaily: Kenshi 2](https://gamedaily.com/features/lo-fi-games-ceo-finally-talks-about-kenshi-2)
+- [Siliconera: Kenshi eight-year journey](https://www.siliconera.com/kenshis-eight-year-development-journey-from-one-man-rpg-to-a-teams-success/)
 - [Wikipedia: Kenshi](https://en.wikipedia.org/wiki/Kenshi_(video_game))
 - [GameSkinny: Kenshi developers](https://www.gameskinny.com/culture/behind-the-scenes-with-the-developers-of-kenshi/)
 - [Siliconera: Kenshi](https://www.siliconera.com/?p=504862)
