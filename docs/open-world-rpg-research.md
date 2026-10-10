@@ -531,6 +531,86 @@
 
 ---
 
+## 18-B. 추가 조사 (리텐션 데이터, 법규, 현지화, 참고 게임, QA, 팀 구성, 출시 전략)
+
+> 18.1의 미조사 항목 중 이번에 조사한 것. 신뢰도 표기는 0장 기준. 모두 검색 요약이며 원문은 확인하지 못했다.
+
+### B.1 완주율·이탈 데이터 (스팀 업적 기반)
+- 위쳐 3: 스팀 사용자 23.7%가 엔딩을 봤다는 글, 약 27%라는 글. 한 글은 65%만 화이트 오처드를 넘었다고 주장. (C)
+- 스카이림: 특별판 완료율 11.1%, 또는 '드래곤슬레이어' 업적 31.5%(특별판 11.5%) 등 수치가 엇갈린다. 사이드 퀘스트에 집중하는 플레이어가 많아서일 수 있다는 해석. (C)
+- 엘든 링: "메인 스토리 완료" 업적 26.6%. 약 40%라는 글은 이상치로 보인다. 구매자 4명 중 3명이 엔딩을 못 봤다는 글도 있다. (C)
+- 발더스 게이트 3: 1,500만 장 이상 팔렸지만 완주한 플레이어는 약 23%라는 보도. (C)
+- **주의**: 업적 해금률이라서 오프라인·업적 미해금 플레이어를 과소 집계한다. 스냅샷 시점과 "완료" 정의도 다르다. 공식 리텐션 곡선은 확인하지 못했다. 위쳐 3 "튜토리얼 지역 이후 절반 이탈"은 출처 없는 포럼 댓글이다. (C)
+- [제안] 수백 시간 플레이하는 소수와 엔딩을 못 보는 다수가 공존한다는 점을 전제로, **엔딩 도달**과 **장기 플레이**를 별개의 지표로 설계/측정한다. 완주율이 낮은 것 자체가 실패는 아니다.
+
+### B.2 법규: 확률형 아이템
+- 중국: 2017년부터 확률형 아이템의 보상 목록과 획득 확률 공개 의무. 일일 구매 횟수 제한도 언급된다. 준수가 불완전하다는 2022 학술 연구. (A/B)
+- 벨기에: 2018년 도박위원회가 유료 루트 박스를 불법 도박으로 판단. 2025년 1월 안트베르펜 기업법원이 LS v. Apple에서 유료 루트 박스가 불법 우연 게임이라 판결했다는 보도. 집행은 일관되지 않다는 반론도 있다. (B)
+- 네덜란드: 출처 간 상충. 2022년 3월 법원이 도박 당국의 금지를 뒤집어 유료 루트 박스가 기술적으로 합법이라는 설명과, 2018년에 확률 공개·현금화 제거가 없으면 금지했다는 설명이 있다. 확인 필요. (C)
+- 미국: 2025년 1월 FTC가 겐신 임팩트 퍼블리셔 Cognosphere와 합의. 드롭 확률을 법정화폐 가치 기준으로 공개하는 등의 조건. (B)
+- 폴란드: 2025년 말 우연 기반 구매 게임에 도박 라이선스를 요구하는 개정안을 초안했다는 단일 출처. (C)
+- 법률 사무소 블로그 중심이며 규제 당국 원문이 아니다. **실제 적용 전에 전문가 확인 필수.**
+- [제안] 싱글 플레이 오픈월드 RPG는 확률형 유료 상품을 아예 쓰지 않는 쪽이 법적 위험이 가장 낮다.
+
+### B.3 현지화·음성·대사량
+- 발더스 게이트 3: 기네스 기록상 대본 2,503,837단어, 그중 약 212만이 캐릭터 대화. 음성 캐릭터 500명 이상, 성우 240명 이상. 라리안 디렉터가 GDC에서 136만 5천 단어, 컷신 약 140시간이라고 말했다는 보도(Gfinity)와 수치가 다른데, 인터페이스·아이템 설명 포함 여부 등 집계 방식 차이로 보인다. (A/B)
+- 위쳐 3 대사량은 신뢰할 수 없는 출처(약 50만 단어)뿐이다. 디스코 엘리시움은 약 100만 단어라는 사용자 글. (C)
+- **현지화 예산, 성우 단가, 모션/퍼포먼스 캡처 비용은 확인하지 못했다.**
+
+### B.4 참고 게임: 킹덤 컴: 디라이버런스 (워호스)
+- GDC 2026 "KCD & KCD2의 수천 NPC 지원"(Petr Smrcek, AI 프로그래머): KCD2는 지도 위 NPC를 4배인 약 2,400명으로 늘리고 절반 정도를 한 도시에 집중시켰다. AI 시뮬레이션의 LOD 기법을 새로 도입하되 스크립팅 인터페이스가 LOD를 최대한 의식하지 않도록 했다. 수천 개의 복잡한 NPC를 60FPS로 시뮬레이션할 수 있고, 초기에 계획과 제한을 확실히 세우는 게 중요하며, 스레드 활용, 표준화된 로직의 코드 이관, 상황별로 걷어낼 것을 아는 것이 도움이 된다고 한다. (A, 세션 초록)
+- 시간 분할·월드 상태 관리는 세션 초록으로 확인되지 않았고 2차 글의 추론이다. (C)
+- 리뷰: NPC에게 일과가 있지만 퀘스트가 얽히지 않는 한 거의 벗어나지 않는다. 먹고 쉬어야 하는데 말은 즉시 소환되는 등 현실성 기준이 일관적이지 않다는 비판. (B)
+- 워호스는 후속 인터뷰에서 "현실성보다 게임플레이 우선"이라 밝히며 저장 시스템, 전투 난이도, 밤 횃불을 현실감은 더하지만 좌절을 줄 수 있는 요소로 들었다. (A)
+- 출시 당시 NPC 스크립팅 실패(중요 인물이 나타나지 않음), 상인 인벤토리가 매일 초기화되는 경제 문제 보고. 소규모 팀이 처리할 양이 많았다는 평. 수천 NPC가 일과로 움직이는 오픈월드에서 애니메이션 문제는 예상 범위라는 평도 있다. (B)
+- 다니엘 바브라의 설계 관점이나 내부 갈등은 확인하지 못했다.
+
+### B.5 참고 게임: 아우터 와일즈
+- GDC 2020 "호기심 주도 탐험: 아우터 와일즈의 설계"(Alex Beachum, Loan Verneau): 초기 2D 프로토타입부터 중심 미스터리의 구조, 호기심을 보상하는 기법, 비전통적 구조의 전달 방법을 다룬다는 발표 안내. 발표 내용 자체는 확인하지 못했다. (B)
+- GDC 2021 "서사로 호기심 주도 탐험 일으키기"(Kelsey Beachum): 서사가 호기심 중심 탐험을 어떻게 돕는지 다룬다. 제3자 강의 개요의 항목("정보를 밀기 vs 당기기", "진행 추적", "콘텐츠 3단계", "탐험을 이야기로 보상")은 발표 내용이 아니라 개요다. (B/C)
+- 목표는 임무 부여가 아니라 **플레이어가 정하는 상징적(diegetic) 진행**으로 탐험을 동기화하는 것. (B)
+- 비판: 전통적 업그레이드·장비·전투 시스템이 없어서 RPG에 익숙한 플레이어에게는 장벽이고, 22분 루프는 인내심을 시험한다. (B)
+- [제안] RPG의 "수치 성장"을 쓰지 않을 때 **지식·발견이 진행의 역할**을 할 수 있다는 사례. 수치 성장과 지식 성장을 병행할지 설계 초기에 정한다.
+
+### B.6 참고 게임: 발헤임, 켄쇼
+- **발헤임** (아이언 게이트): 얼리 액세스 때 5명으로 개발, 현재는 16명 중 8명이 발헤임 전담. 출시 20일 만에 스팀 동시 접속 50만 명 이상. 팬데믹 때 친구와 함께할 사회적 게임이 필요했던 시기가 흥행을 도왔다는 평. 가장 어려웠던 순간은 출시 후 접속 급증이었고 개발에 집중하며 계속 나아가기로 했다고 한다. 얼리 액세스 5년 후 1.0 출시. (A/B)
+- 제프 보겔의 외부 분석: 보스 5명이 각각 새로운 금속 광석 접근을 열어 준다. 포털은 이미 방문한 곳으로만 이동할 수 있고, 이동이 위험하고 느리기 때문에 필요한 편의다. Iron Gate의 설명이 아니라 비평가의 해석. (C)
+- 발헤임의 바이옴 진행·보스 게이팅에 대한 개발사 직접 발언은 확인하지 못했다.
+- **켄쇼** (크리스 헌트): 사실상 1인 개발로 약 12년(소스마다 시작 시점이 다름). 야간 경비원으로 일하며 개발. 얼리 액세스 매출로 전업 가능해짐. 스스로 "스카이림과 드워프 포트리스의 중간"이라 표현. 전제는 선택받은 영웅이 아니라 평범한 "아무개"가 살아가려 애쓰는 것. 2013년경 소규모 팀을 고용. 시스템을 자기만 안다고 느껴 통제를 놓는 데 시간이 걸렸다고 한다. (A/B)
+- 켄쇼의 NPC 시뮬레이션·진영 시스템 세부는 확인하지 못했다.
+
+### B.7 QA·테스트
+- 호라이즌 제로 던 (Guerrilla, GDC): 21개월 테스트 수명주기, 소규모 내부 팀에서 전 세계 70명 이상으로 확장, 수만 시간 투입. 자동화 테스트와 텔레메트리로 탐색 테스트 전략을 결정했다. 리스크 관리, 테스트 전략, 출시 후 지원, 텔레메트리, 리스크 레지스터를 다뤘다. (A, 세션 초록)
+- 2차 요약: QA가 초기부터 개발팀에 합류, 퀘스트·전투·인벤토리 등 영역별 전문가 육성, 체크리스트 대신 세션 기반·리스크 기반 테스트, 수동 테스트만으로 오픈월드 전체 범위를 못 덮어서 자동화로 보완. (B)
+- 오픈월드는 맵 글리치, 보이지 않는 벽, 경계 문제를 찾으려면 넓은 영역을 일일이 돌아야 해서 느리고 노동 집약적이다. (B)
+- ML 자동 플레이 에이전트 사례(GDC 2024, QA 2~3명 소규모 로그라이크): 사람은 기능 테스트, AI는 선제적 버그 탐지와 스테이지 균형 검증. 오픈월드가 아니다. (B)
+- 스카이림 등 베데스다의 QA 인원은 확인하지 못했다. "2026년에 47% 스튜디오가 AI QA" 같은 수치는 출처 불명. (C)
+
+### B.8 팀 구성
+- 대학 수업 자료: AAA 팀 300~700명, 3~5년, 대략 3분의 2 아티스트·3분의 1 프로그래머, 디자이너와 프로듀서는 소수. (C)
+- 스튜디오 블로그: 아트 30~50%, 엔지니어링 20~35%, QA 10~20%, 디자인 5~15%, 프로덕션 5~10%. 엄격한 규칙이 아니고 두 자료는 프로그래머 비중이 다르다. 오픈월드는 콘텐츠가 곱절로 늘고 시스템은 재사용되므로 아트 비중이 커진다는 논거. (C)
+- 사례: 그라인딩 기어 게임즈(Path of Exile, 라이브 서비스 액션 RPG) 120명 팀 중 프로그래머 14, 게임 디자인 5, 레벨 디자이너 3, 3D 아티스트 8, QA 14(수년 전 수치). (C)
+- 사전 제작·제작·후반 단계의 일반적 기간은 확인하지 못했다.
+- 14.1의 실제 프로젝트 인원(위쳐 3 240명, 엘든 링 약 300명, RDR2 약 1,600명)과 비교하면 **같은 장르라도 인력 규모가 한 자릿수 배 차이**가 난다.
+
+### B.9 얼리 액세스·출시 전략
+- 얼리 액세스는 양날의 검: 돈스타브·발헤임은 크게 이득, 다른 게임은 평판 손상. 자금과 피드백이 장점, 단 한 번의 불안한 출시가 평판과 재정에 치명적일 수 있고, 스팀은 수익 창출만을 위해 쓰지 말라고 경고한다. (B)
+- 스팀 위시리스트는 출시일 판매의 가장 명확한 예측 지표라는 주장. 스팀 넥스트 페스트는 인디 개발자가 보는 가장 큰 출시 전 위시리스트 급증원이라는 주장. 한 소규모 스튜디오 사후 분석에서 페스티벌 4일간 하루 약 100개 위시리스트. (C)
+- 1.0 때 가격 인상은 긴박감을 만들지만 콘텐츠가 맞지 않으면 과대 지불했다는 느낌이 든다는 논의. (C)
+- 성공하는 얼리 액세스 게임이 FPS·멀티플레이·샌드박스·로그라이크 쪽에 몰려 있다는 인디 개발자 의견. 싱글 플레이 RPG의 가격·비교 사례는 확인하지 못했다. (C)
+- BG3의 얼리 액세스 활용은 6.1 참조.
+
+### B.10 18.1 미조사 항목 갱신
+위 B.1~B.9로 일부 해결. **여전히 미조사/불충분**:
+- 현지화·음성·캡처의 실제 비용, 일반적 제작 단계별 기간
+- 베데스다 QA, 스카이림 버그 관리
+- 발헤임 설계 의도 원문, 켄쇼 시스템 세부
+- 호라이즌·킹덤 컴·아우터 와일즈 GDC 원문
+- 싱글 플레이 RPG 가격 전략, 마케팅 비용
+- 디스코 엘리시움 등 서사 중심 RPG 분석
+
+---
+
 ## 19. 출처
 
 **동기·루프**
@@ -645,6 +725,37 @@
 - [80.lv: UE5 shader stuttering](https://80.lv/articles/epic-games-devs-on-solutions-to-unreal-engine-5-shader-stuttering-issues)
 - [GDC Vault: Streaming in Sunset Overdrive](https://gdcvault.com/play/1022268/Streaming-in-Sunset-Overdrive-s)
 - [GDC 2024: Spider-Man 2 procedural content](https://schedule.gdconf.com/session/marvels-spider-man-2-10-years-of-procedural-content-creation/900288)
+
+**추가 조사(18-B)**
+- [Notebookcheck: BG3 23% completion](https://www.notebookcheck.net/Baldur-s-Gate-3-Despite-over-15-million-copies-sold-only-23-of-players-actually-played-it-to-completion.1126313.0.html)
+- [Two Average Gamers: completion rates](https://www.twoaveragegamers.com/game-completion-rates/)
+- [Promise Legal: loot box laws by jurisdiction](https://blog.promise.legal/loot-box-laws-by-jurisdiction-indie-game-studios/)
+- [Promise Legal: lootbox compliance](https://blog.promise.legal/lootbox-laws-game-developers/)
+- [CMS: loot boxes in the EU](https://cms.law/en/gbr/legal-updates/direction-of-travel-for-loot-boxes-in-the-eu)
+- [Xiao 2024: Loot box state of play 2023](https://pure.itu.dk/ws/files/105965365/xiao-2024-loot-box-state-of-play-2023-law-regulation-policy-and-enforcement-around-the-world.pdf)
+- [Guinness: longest script for a videogame](https://www.guinnessworldrecords.com/world-records/764696-longest-script-for-a-videogame)
+- [Gfinity: BG3 word count](https://www.gfinityesports.com/article/baldurs-gate-3-has-higher-word-count-than-lord-of-the-rings)
+- [GDC schedule: Supporting thousands of NPCs in KCD](https://schedule.gdconf.com/session/supporting-thousands-of-npcs-in-kingdom-come-deliverance-kingdom-come-deliverance-ii/915120)
+- [GameDev.net: thousands of NPCs in KCD](https://gamedev.net/news/5526-supporting-thousands-of-npcs-in-kingdom-come-deliverance-kingdom-come/)
+- [GOG: Warhorse interview on KCD2](https://www.gog.com/news/read_our_exclusive_interview_with_warhorse_studios_about_kingdom_come_deliverance_ii)
+- [Kotaku: KCD review](https://kotaku.com/kingdom-come-deliverance-the-kotaku-review-1823606430)
+- [GDC Vault: Outer Wilds Sparking Curiosity](https://gdcvault.com/play/1027008/Independent-Games-Summit-Sparking-Curiosity)
+- [GDC: Outer Wilds curiosity-driven design](https://www.gdconf.com/news/attend-gdc-and-learn-how-outer-wilds-nailed-curiosity-driven-game-design)
+- [Automaton: Valheim 8 team members](https://automaton-media.com/en/interviews/valheim-developers-continue-to-work-with-only-8-team-members-we-ask-them-why-they-stick-to-small-scale-development-amid-growing-competition/)
+- [GamesBeat: Valheim 1.0](https://gamesbeat.com/valheim-finally-hits-1-0-after-five-years-in-early-access-interview/)
+- [GameBanshee: Jeff Vogel on Valheim](https://www.gamebanshee.com/ah99q)
+- [Inverse: Valheim devs](https://nc.inverse.com/gaming/valheim-devs-interview-breath-of-the-wild-skyrim)
+- [Wikipedia: Kenshi](https://en.wikipedia.org/wiki/Kenshi_(video_game))
+- [GameSkinny: Kenshi developers](https://www.gameskinny.com/culture/behind-the-scenes-with-the-developers-of-kenshi/)
+- [Siliconera: Kenshi](https://www.siliconera.com/?p=504862)
+- [Guerrilla: Horizon QA case study](https://www.guerrilla-games.com/read/horizon-zero-dawn-an-open-world-qa-case-study)
+- [GDC Vault: Horizon Zero Dawn QA](https://gdcvault.com/play/1025326/-Horizon-Zero-Dawn-A)
+- [Xebia: Testing Horizon Zero Dawn](https://xebia.com/blog/testing-horizon-zero-dawn)
+- [UMBC: Development roles](https://userpages.cs.umbc.edu/olano/class/493-25-2/roles.md.html)
+- [Kevuru: team structure](https://kevurugames.com/blog/game-development-team-structure-average-team-sizes-and-production-statistics/)
+- [GameMaker: Early Access](https://gamemaker.io/en/blog/early-access-games)
+- [Xsolla: Early Access](https://xsolla.com/blog/early-access-will-it-help-or-hurt-your-game)
+- [Steam Page Analyzer: Early Access strategy](https://www.steampageanalyzer.com/blog/steam-early-access-strategy)
 
 **기술·제작·출시 후**
 - [Unreal: World Partition](https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine)
