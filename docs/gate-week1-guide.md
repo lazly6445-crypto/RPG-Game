@@ -205,3 +205,18 @@ Godot는 **표준 빌드(GDScript)** 와 **.NET 빌드(C#)** 가 별도로 있�
   - 에디터: `D:\tools\gate-godot\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64.exe`
   - 콘솔: `D:\tools\gate-godot\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64_console.exe`
 - **명령줄 옵션(4.7.2 콘솔 `--headless --help`, 종료 코드 0):** `--headless`, `--path <dir>`, `-s/--script`, `--scene <path>`, `--quit-after <int>`(반복 횟수), **`--check-only`(`--script`와 함께, 문법 오류만 검사)**, `--export-release <preset> <path>`(`export_presets.cfg` 필요), `--import`. 이전에 미확인이던 `--check-only`가 **확인됐다.**
+
+### 11.1 자동 루프 결과 (2026-11-01, PC 쪽 Claude Code 세션)
+
+- **픽셀 퍼펙트 설정 키 검증 완료(헤드리스 확인 스크립트 `tools/verify_settings.gd`, 후보 8개 모두 유효):**
+  - `display/window/size/viewport_width` = 640, `viewport_height` = 360
+  - `display/window/stretch/mode` = viewport, `aspect` = keep, `scale_mode` = integer
+  - `rendering/textures/canvas_textures/default_texture_filter` = 0 (Nearest, 기본값 1은 Linear)
+  - `rendering/2d/snap/snap_2d_transforms_to_pixel` = true, `snap_2d_vertices_to_pixel` = true
+  - `application/run/main_scene` = `res://scenes/main.tscn`
+- **만든 파일:** `tools/verify_settings.gd`, `scripts/player.gd`(8방향 이동, 실수 좌표 누적 후 반올림), `scenes/main.tscn`, `CLAUDE.md`. 수정: `project.godot`.
+- **검사:** `player.gd --check-only` 종료 코드 0 / `main.tscn --headless --quit-after 60` 종료 코드 0, 오류 없음. 수정 루프는 돌지 않았다.
+- **.gitignore:** `.godot/`, `/android/` 무시. **.gitattributes:** `* text=auto eol=lf`만 있고 **LFS 설정은 없다**(이미지·오디오 추가 전에 `.gitattributes`에 LFS 규칙 추가 필요).
+- **Git:** `user.name`·`user.email`이 설정돼 있지 않아 **저장소 생성·커밋을 못 했다**(`git init`도 안 함). 사용자가 이름·이메일을 알려 주면 이 프로젝트에만(전역 아님) 설정하고 커밋한다.
+- **사람이 에디터에서 눈으로 확인할 것:** 창을 2배/3배로 키웠을 때 정수 배율 확대와 검은 여백, 이동 중 가장자리 흔들림·번짐, 대각선 이동 속도와 카메라 추적.
+- 참고: PC 세션의 Bash `python3` 호출이 멈춰 중지시켰고, 그 과정에서 프로젝트 밖 `/tmp`에 빈 임시 파일 `p.ps1`이 남았다(내용 없음).
