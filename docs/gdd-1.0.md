@@ -403,6 +403,7 @@
 | `dev-roadmap.md` | 개발 로드맵, 엔진 의견, 단계 개요, 위험 |
 | `engine-comparison-memo.md` | 엔진 비교 메모(P0 1주차): 확인 사실·미확인·게이트 계획 |
 | `prototype-d-spec.md` | 프로토타입 D(지형 변형) 사양서: 시나리오·측정 항목·합격선·퇴로 |
+| `engine-gate-plan.md` | 엔진 게이트 측정 계획서(P0 1~4주차): 후보 순서·측정 항목·합격선·선택 규칙 |
 | `dev-spec-phases.md` | 단계별 상세 사양, 부록 B 결정 표, 부록 D 컨셉 반영 상세 |
 | `story-concept-2d.md` | 사용자 원본 컨셉(2D용). 수정하지 않음. 충돌 시 이 GDD가 이긴다 |
 | `open-world-rpg-research.md` | 오픈월드 RPG 조사(R) |
