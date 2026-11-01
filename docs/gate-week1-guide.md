@@ -220,3 +220,17 @@ Godot는 **표준 빌드(GDScript)** 와 **.NET 빌드(C#)** 가 별도로 있�
 - **Git:** `user.name`·`user.email`이 설정돼 있지 않아 **저장소 생성·커밋을 못 했다**(`git init`도 안 함). 사용자가 이름·이메일을 알려 주면 이 프로젝트에만(전역 아님) 설정하고 커밋한다.
 - **사람이 에디터에서 눈으로 확인할 것:** 창을 2배/3배로 키웠을 때 정수 배율 확대와 검은 여백, 이동 중 가장자리 흔들림·번짐, 대각선 이동 속도와 카메라 추적.
 - 참고: PC 세션의 Bash `python3` 호출이 멈춰 중지시켰고, 그 과정에서 프로젝트 밖 `/tmp`에 빈 임시 파일 `p.ps1`이 남았다(내용 없음).
+
+### 11.2 Git 저장소 생성 결과 (2026-11-01)
+
+- `D:\gate-godot`에 저장소를 만들고(`main` 브랜치) 커밋 4개를 순서대로 만들었다. push·remote 추가 없음.
+  ```
+  deab39d Add project instructions
+  3959be1 Add minimal 8-direction movement test scene
+  0ca4e01 Set 640x360 pixel-perfect display settings and settings verifier
+  55e2ab2 Initial Godot 4.7.2 project files
+  ```
+- 커밋별 파일: ① `.editorconfig`, `.gitattributes`, `.gitignore`, `icon.svg`, `icon.svg.import` ② `project.godot`, `tools/verify_settings.gd`(+`.uid`) ③ `scenes/main.tscn`, `scripts/player.gd`(+`.uid`) ④ `CLAUDE.md`.
+- Git 작성자 설정은 **이 저장소에만(로컬)** 적용했다(`--global` 없음). 상태는 깨끗하고(`git status --short` 비어 있음) 예상 밖 파일은 없었다.
+- 이 이름·이메일은 커밋 기록에 남는다. 원격 저장소에 올릴 때 공개되므로, 공개를 원하지 않으면 올리기 전에 작성자를 noreply 이메일로 바꾸는 작업이 필요하다.
+- 아직 LFS 규칙이 없다(`.gitattributes`에는 줄바꿈 규칙만). 이미지·오디오를 넣기 전에 추가한다.
