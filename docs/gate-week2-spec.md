@@ -137,3 +137,9 @@
 - 지금 바로: **2-0 API 검증**(작고 안전, 이후 모든 단계의 근거).
 - 이어서 2-1 → 2-2 → … 순서로 한 세션씩. 각 세션이 끝나면 결과를 이 대화에서 확인하고 다음 지시문을 만든다.
 - 모든 지시문에는 `CLAUDE.md`의 규칙(스포일러 문구 금지, 푸시·삭제·설치 금지)을 포함한다.
+
+---
+
+## 7. 진행 기록
+- **2-0 API 검증 완료:** 38개 항목 전부 존재(MISSING 0), 재시도 없음. 확인된 것: TileMapLayer 메서드 14종(`set_cell`, `erase_cell`, `get_used_cells`, `set_cells_terrain_connect`, `set_tile_map_data_from_array`, `notify_runtime_tile_data_update` 등), TileSet·TileSetAtlasSource 메서드, `FastNoiseLite` 프로퍼티, `Image` 메서드, Performance 상수(`TIME_FPS`, `TIME_PROCESS`, `MEMORY_STATIC`, `OBJECT_COUNT`, `RENDER_TOTAL_DRAW_CALLS_IN_FRAME`, `RENDER_TOTAL_OBJECTS_IN_FRAME` 등). 게임 PC 저장소 커밋 452e72f(푸시 없음), 결과 파일 `tools/verify_api_result.txt`.
+- 한계: 존재 여부만 확인했다. 동작·성능은 이후 단계에서 측정한다.
