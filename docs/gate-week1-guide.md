@@ -191,3 +191,17 @@ Godot는 **표준 빌드(GDScript)** 와 **.NET 빌드(C#)** 가 별도로 있�
 ## 10. 사용자 결정이 필요한 것
 해결: 코드 언어(결정 119), 픽셀 아트 도구(결정 120), 저장소 위치(결정 121).
 남은 것: **8GB 메모리 제한 방식** — 안전한 방법을 확인할 때까지 보류(제안).
+
+---
+
+## 11. 실측 기록: 원격 세션으로 확인한 현재 상태 (2026-11-01, 읽기 전용)
+
+사용자 PC의 Claude Code 세션(Remote Control, `D:\gate-godot`)이 읽기 전용으로 확인한 결과다. 파일은 수정하지 않았다.
+- **프로젝트 폴더:** `.editorconfig`(숨김), `.gitattributes`, `.gitignore`, `icon.svg`, `icon.svg.import`, `project.godot`. 씬·스크립트는 아직 없다. 엔진은 프로젝트 안에 없다.
+- **Git:** 설치됨(`C:\Program Files\Git\cmd\git.exe`). 그러나 **저장소가 아님**(`fatal: not a git repository`). Godot의 Git 옵션은 `.gitignore`·`.gitattributes`만 만들고 `git init`은 하지 않았다.
+- **`project.godot` 현재 값:** `config/name="2026-11-02 2D RPG"`, `config/features=("4.7","GL Compatibility")`, `[display] window/stretch/mode="canvas_items"`, `window/stretch/aspect="expand"`, `[physics] 3d/physics_engine="Jolt Physics"`, `[rendering] renderer/rendering_method="gl_compatibility"`, `rendering_device/driver.windows="d3d12"`. 뷰포트 크기·scale_mode·텍스처 필터·픽셀 스냅 키는 **없음**.
+- **키 이름 확인 수준:** 파일에서 직접 확인한 것은 `window/stretch/mode`, `window/stretch/aspect`뿐이다. 나머지(`window/size/viewport_width`·`viewport_height`, `window/stretch/scale_mode`, `textures/canvas_textures/default_texture_filter`, `2d/snap/snap_2d_transforms_to_pixel`·`snap_2d_vertices_to_pixel`)는 기억 기반이라 **에디터에서 한 번 설정해 저장된 이름으로 확정**한다.
+- **Godot 실행 파일 경로(정정):** 사용자가 알려 준 `D:\tools\gate-godot\Godot_v4.7.2-stable_win64.exe`는 파일이 아니라 **폴더**였다(압축 해제 때 폴더 이름에 `.exe`가 붙음). 실제 실행 파일:
+  - 에디터: `D:\tools\gate-godot\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64.exe`
+  - 콘솔: `D:\tools\gate-godot\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64_console.exe`
+- **명령줄 옵션(4.7.2 콘솔 `--headless --help`, 종료 코드 0):** `--headless`, `--path <dir>`, `-s/--script`, `--scene <path>`, `--quit-after <int>`(반복 횟수), **`--check-only`(`--script`와 함께, 문법 오류만 검사)**, `--export-release <preset> <path>`(`export_presets.cfg` 필요), `--import`. 이전에 미확인이던 `--check-only`가 **확인됐다.**
