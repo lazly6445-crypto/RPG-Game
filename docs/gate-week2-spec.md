@@ -143,3 +143,9 @@
 ## 7. 진행 기록
 - **2-0 API 검증 완료:** 38개 항목 전부 존재(MISSING 0), 재시도 없음. 확인된 것: TileMapLayer 메서드 14종(`set_cell`, `erase_cell`, `get_used_cells`, `set_cells_terrain_connect`, `set_tile_map_data_from_array`, `notify_runtime_tile_data_update` 등), TileSet·TileSetAtlasSource 메서드, `FastNoiseLite` 프로퍼티, `Image` 메서드, Performance 상수(`TIME_FPS`, `TIME_PROCESS`, `MEMORY_STATIC`, `OBJECT_COUNT`, `RENDER_TOTAL_DRAW_CALLS_IN_FRAME`, `RENDER_TOTAL_OBJECTS_IN_FRAME` 등). 게임 PC 저장소 커밋 452e72f(푸시 없음), 결과 파일 `tools/verify_api_result.txt`.
 - 한계: 존재 여부만 확인했다. 동작·성능은 이후 단계에서 측정한다.
+- **2-1 완료** (ffcc173): 더미 타일셋 12종(384×32 아틀라스), 확인 씬 `tileset_test`.
+- **2-2 완료** (df39fc0, 5bd0e32): 1024×1024 월드, 청크 32×32, 반경 1·2 스트리밍. 헤드리스 ALL PASS. 구역·높이는 체커보드 표시(짝수 칸 높이, 홀수 칸 구역).
+- **2-3 완료** (5de8c57): 높이 변형, 구역 한계(+1/−1, +3/−2, +4/−3), 범위, 흙 블록(상한 99 [가정]), 마스크, 절벽 레이어 증분 갱신. 무작위 편집 2000회 후 전체 재계산 불일치 0.
+- **2-4 완료** (a1d5d3b): 격자 이동·낙하·갇힘 복구·함정 더미. T2 50회, T3 20회, T7 50회, T8 20시나리오 모두 불일치 0. 무방비 8.0초 [가정]. 플레이어 중심 타일 편집은 거부(SELF) — 사용자 확인 필요.
+- **2-5 완료** (de510ab): 델타 저장(헤더 18B + 항목 5B), 별도 프로세스 해시 일치, 손상 파일 거부 15종 이상. 10만 곳 500KB. 시간은 헤드리스 참고치.
+- **2-6 완료** (97f2e0b): 측정 씬 `bench.tscn`, 실행 `tools/run_bench.ps1`(5종: stream r1/r2 1080p, edit r2 1080p, stream r2 720p, edit r2 720p). 창 모드 실측은 **사용자 실행 대기**. 주의: 구역 0에서는 BOX3 요청이 SINGLE로 낮춰지므로 edit 부하는 구역별로 다름(note에 적용 모드 미기록).
