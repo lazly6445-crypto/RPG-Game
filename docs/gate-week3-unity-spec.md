@@ -158,3 +158,25 @@ Godot 측정과 같은 시나리오·같은 CSV 컬럼(`gate-week2-spec.md` §1.
 - `Tilemap.SetTiles`: https://docs.unity3d.com/ja/6000.0/ScriptReference/Tilemaps.Tilemap.SetTiles.html
 - TilemapRenderer 모드(Chunk): https://docs.unity3d.com/ScriptReference/Tilemaps.TilemapRenderer.Mode.Chunk.html
 - `SetTilesBlock` 성능 포럼 글(구버전, 참고용): https://forum.unity.com/threads/tilemap-settilesblock-performance.537274/
+
+---
+
+## 11. 진행 기록
+### 3-0 완료 — Godot 원본 월드 통계 (게임 PC 커밋 218b8c3, `bench/godot_world_stats.txt`)
+델타 없는 1024×1024 월드 전체 순회.
+
+| 항목 | 값 |
+|---|---|
+| 높이 0 / 1 / 2 / 3 (전체) | 17,385 / 508,571 / 504,259 / 18,361 (구역별 거의 동일) |
+| 절벽 셀(북쪽 이웃이 더 높음, y=0 제외) | 31,092 / 1,047,552 = **2.97%** (구역 0/1/2: 2.95/2.95/3.00%) |
+| 높이차 n=1 / 2 / 3 | 31,092 / 0 / 0 |
+| 청크당 절벽 수 | 평균 30.4, 최소 1, 최대 75, 표준편차 12.3 (1024청크) |
+| 가로 인접 동일 높이 비율 | 94.0% |
+| 노이즈 | `TYPE_SIMPLEX_SMOOTH`, seed 12345, frequency 0.02, **FBM 5옥타브(코드에서 설정하지 않은 Godot 기본값)**, lacunarity 2.0, gain 0.5 |
+| 높이 변환식 | `clampi(int((noise * 0.5 + 0.5) * 4.0), 0, 3)` |
+
+해석과 주의:
+- 원본 월드는 **대부분 높이 1~2의 평탄한 지형**이고 절벽이 3%뿐이며 모두 1단이다. 2주차 Godot 성능 수치(`gate-week2-spec.md` §8)는 이런 지형에서의 값이다. 절벽이 많은 지형(예: 산지)이나 편집으로 절벽이 늘어난 상태의 비용은 이 수치로 알 수 없다. 편집 시험은 델타를 만들기는 하지만 월드 전체의 절벽 밀도를 높이지 않는다.
+- Unity 쪽은 위 노이즈 설정(FBM 5옥타브 포함)과 변환식, 절벽 밀도 2.97% ± 오차, 인접 동일 비율 94%에 맞춰 생성한다. 정확히 같은 값이 나오지 않는 것은 정상이며, 같은 방법으로 측정해 비교 가능한지만 본다.
+- **[제안] 절벽 부하 시험 추가:** 양쪽 엔진에서 고밀도 절벽 지형(예: 주파수를 높여 절벽 비율 20% 이상)을 같은 방법으로 한 번 더 측정한다. 평탄한 지형만으로는 최악 부하를 놓친다. 범위 A에 포함하는 것을 권한다.
+- 남은 3-0 항목: Godot 이터레이션 시간(사용자 스톱워치 필요).
