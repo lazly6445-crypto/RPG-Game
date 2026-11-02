@@ -82,3 +82,4 @@
 
 ## 4. 진행 기록
 - **B5 완료** (게임 PC 커밋 28a2570): `ManaField`(옅음 0.2/중간 0.55/짙음 0.9 [가정], 경계 ±4타일 선형 보간, 던전 깊이 0.2→0.9), `MonsterScale`(농도→HP/속도/피해 배율, 상한), `data/mana.json`, `test_mana`(31/31 PASS), 기존 테스트 PASS, `Terrain` 불변. 상한(cap)은 scale_max보다 낮게 둠(HP cap 1.3 등).
+- **B1 완료** (게임 PC 커밋 16e4ed0): `data/monsters.json`(들개: HP 2/속도 70/피해 1, 감지 160, 사거리 40, 예비동작 0.3s, 돌진 0.25s×2.0, 후딜 0.6s, 소굴 개체 1~3·영역 10타일), `MonsterSim`(CombatSim 상속), 소굴(짐 더미), 확인 씬 `monster_view.tscn`(1 소굴 소환, L 영역 원, F 마소·능력치, T 구역 이동). 마소 배율 확인: 시가지 d=0.2 → HP 2·속도 61.6·피해 0.82, 짙은 구역 d=0.9 → HP 3·속도 80.5·피해 1.24. `test_monsters` PASS, 기존 테스트 PASS. 기존 파일 최소 수정 2곳(`combat_sim.hit_player` 인자, `combat_draw` 적 그리기 함수 분리). **주의:** `test_combat_input.gd`가 출력이 없어 판정 불가(B2 세션에서 확인).
