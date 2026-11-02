@@ -6,3 +6,5 @@
 |---|---|---|---|---|---|---|
 | A-1~3 | 프로토타입 A 전투 감 | `scenes/combat_view.tscn` | WASD 이동, **좌클릭 공격**, Space 회피, 1/2/3 적 소환, H 히트박스, 0 피해 배율, M 흔들림, R 리셋 | 공격 swipe와 선딜/후딜이 보이는가, 회피 잔상·무적 표시, 적 예비동작(노란 점멸+붉은 원), 피격 반응·데미지 숫자, 바닥·벽 가독성(readable). 좌클릭 직후 HUD 마지막 이벤트가 `attack_start`로 바뀌는지(입력 확인) | `data/combat.json` | 8c958db, 2a18dde, f89c9c2 |
 | B1 | 몬스터 틀 + 들개 | `scenes/monster_view.tscn` | 1 소굴 소환, L 영역 원, F 마소·능력치 HUD, T 시가지/중간/짙은 구역 이동, 좌클릭 공격, Space 회피, R 리셋 | 들개 형태·예비동작(웅크림·!)·돌진 궤적·영역 포기(?) 가독성, 영역(leash) 느낌, 시가지에서 약하고 짙은 곳에서 강한 체감, 소굴 개체 수 | `data/monsters.json`, `data/mana.json` | 16e4ed0 |
+| B2 | 불나비 + 잘라낸 자리 | `scenes/monster_view.tscn` | 4 (7×5 보라·청록 땅 + 불나비 1~2), L 영역, F 능력치 | 잘라낸 자리 땅빛 가독성, 나비 형태·날갯짓, 한 칸 물러서면 '…' 후 복귀, 속도(40px/s) 체감, 예비동작 0.5초 | `data/monsters.json`, `data/cutouts.json` | 555e6e9 |
+| B3 | 가시뿌리 + 잔해 | `scenes/monster_view.tscn` | 5 (수풀+가시뿌리+잔해), L reach·줍는 거리 원 | 덩굴 예비동작 읽힘, 비켜 걸으면 안전한 느낌, 잔해와의 거리 감(**잔해를 더 멀리 둘지 = reach 확대 여부 결정 필요**) | `data/monsters.json`(reach 48, 잔해 12~16px, pickup_reach_px 32) | 2ae9c40 |

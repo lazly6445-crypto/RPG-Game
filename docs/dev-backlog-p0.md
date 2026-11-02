@@ -83,3 +83,7 @@
 ## 4. 진행 기록
 - **B5 완료** (게임 PC 커밋 28a2570): `ManaField`(옅음 0.2/중간 0.55/짙음 0.9 [가정], 경계 ±4타일 선형 보간, 던전 깊이 0.2→0.9), `MonsterScale`(농도→HP/속도/피해 배율, 상한), `data/mana.json`, `test_mana`(31/31 PASS), 기존 테스트 PASS, `Terrain` 불변. 상한(cap)은 scale_max보다 낮게 둠(HP cap 1.3 등).
 - **B1 완료** (게임 PC 커밋 16e4ed0): `data/monsters.json`(들개: HP 2/속도 70/피해 1, 감지 160, 사거리 40, 예비동작 0.3s, 돌진 0.25s×2.0, 후딜 0.6s, 소굴 개체 1~3·영역 10타일), `MonsterSim`(CombatSim 상속), 소굴(짐 더미), 확인 씬 `monster_view.tscn`(1 소굴 소환, L 영역 원, F 마소·능력치, T 구역 이동). 마소 배율 확인: 시가지 d=0.2 → HP 2·속도 61.6·피해 0.82, 짙은 구역 d=0.9 → HP 3·속도 80.5·피해 1.24. `test_monsters` PASS, 기존 테스트 PASS. 기존 파일 최소 수정 2곳(`combat_sim.hit_player` 인자, `combat_draw` 적 그리기 함수 분리). **주의:** `test_combat_input.gd`가 출력이 없어 판정 불가(B2 세션에서 확인).
+- **B2 완료** (게임 PC 커밋 555e6e9): `data/cutouts.json`/`Cutouts`(한 변 5~11 검증), 불나비(HP 2·속도 40·피해 1, 예비동작 0.5s·판정 0.15s·후딜 0.7s), 잘라낸 자리 위에서만 활동·밖 1칸이면 포기·복귀, `test_moth` 42 PASS. 확인 씬: `monster_view` 4번 키.
+- **B3 완료** (게임 PC 커밋 2ae9c40): 가시뿌리(HP 3, 위치 고정, reach 48px, 줍는 거리 `pickup_reach_px` 32px, 예비동작 0.5s·판정 0.15s·후딜 0.8s), 잔해 한 줌 보호(`guard_blocks`), `test_thornroot` 31 PASS. 확인 씬: `monster_view` 5번 키.
+  - **설계 충돌 발견:** 내 지시의 "잔해 거리 30~40px + 줍는 거리 32px + reach 48px"는 기하학적으로 동시에 성립하지 않았다(잔해 반대편에서 줍는 점이 reach 밖). 세션이 잔해 거리를 12~16px로 줄여 구현(`debris_max + pickup_reach_px ≤ reach` 검증). 잔해를 멀리 두려면 reach를 72px 이상으로 올려야 한다 → **확인 목록에 올림.**
+- `test_combat_input.gd`는 PASS 5건·종료코드 0으로 정상(출력 없음은 호출 방식 문제였음).
