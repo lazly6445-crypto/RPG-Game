@@ -173,3 +173,5 @@
 - **B25a 완료** (게임 PC 커밋 adeb32d, 푸시 안 함): `scripts/iso_projection.gd`(IsoProjection)·`data/iso.json`(enabled=false, 32×16, 단차 8px, 4방향, 화면 기준 입력 맵, 실루엣 alpha 0.5 — 전부 [가정])·`test_iso_projection.gd` 13개 PASS, 기존 테스트 전부 PASS. 타일 (tx,ty)는 [t−0.5,t+0.5)를 덮고 정수 좌표가 윗면 중심. pick은 max_h(8)부터 내려가며 검사. 사람 확인 없음.
 
 - **B25b 완료** (게임 PC 커밋 036686c, 푸시 안 함): `scenes/iso_terrain_view.tscn`+`iso_terrain_view.gd`+`test_iso_terrain_view.gd`(9개 PASS, 기존 46 PASS). tutorial 월드, Terrain/GridMover 그대로, 윗면+좌(밝음)/우(어두움) 옆면, 대각선(x+y)별 깊이 정렬, 가림 시 시안 실루엣, 마우스 pick 하이라이트, 프레임 ms 표시. 한계: 오르기/낙하 높이 보간 없음, tutorial만 확인. 가시 타일 705. **[사람 확인 대기]**
+
+- **B25c 완료** (게임 PC 커밋 ab95af2, 푸시 안 함): `scenes/iso_combat_view.tscn`+`iso_combat_view.gd`(iso_terrain_view 상속)+`test_iso_combat_view.gd` 17개 PASS, 기존 49개 PASS. iso_terrain_view.gd에 8줄 추가(`_ent()` 훅, occluded 타입 가드). 플레이어·일반/들개/불나비/가시뿌리 도형 렌더, 판정 폴리곤 선딜/판정/후딜 표현, 회피 잔상·예비동작·피격 연출 이식. **빠진 것:** 소굴 중심 표시, 가시뿌리 잔해·덩굴, L/F/T 키, 적대적 존재, 보스, CombatLog, 몬스터 가림 실루엣, 마우스 조준(이동 방향 유지). 바닥 표시는 타일 위에 마지막으로 그림(가려지지 않음). **[사람 확인 대기]**

@@ -28,3 +28,4 @@
 | B20 | 스모크 봇·계측·규칙 퍼징 | (명령줄) `godot --headless --path D:\gate-godot --script res://scripts/test_smoke_bot.gd`(약 20초), `test_rule_fuzz.gd`(약 55초), `playtest_report.gd -- res://playtest/session_<id>.csv` | — | 봇이 새 게임부터 문지기까지 완주하는지, **보통 난이도 던전·문지기가 HP 5로 너무 어렵지 않은지(봇은 쉬움에서만 완주)**, 리포트의 사망 지점·막힘 지점 | `data/smoke.json` | 9645291 |
 
 | B25b 아이소 지형 | `res://scenes/iso_terrain_view.tscn` (에디터 F6 또는 콘솔 exe `--path D:\gate-godot res://scenes/iso_terrain_view.tscn`) | WASD 화면 기준 8방향 이동, 마우스 타일 하이라이트 | 블록 뒤 가림+시안 실루엣, 절벽 옆면 두 톤, 마우스 pick 정확도, 벽 막힘/오르기/낙하, 높이 튐(보간 필요 여부), 좌상단 FPS | `data/iso.json` (타일 32×16, 단차 8px) | 036686c |
+| B25c 아이소 전투 | `res://scenes/iso_combat_view.tscn` (콘솔 exe `--path D:\gate-godot scenes/iso_combat_view.tscn`) | 좌클릭 공격, Space 회피, WASD 이동, 1~5 소환, H 판정 표시, R, 0, M | 공격 선딜/판정/후딜 가독성, 판정 폴리곤 위치(40×32px) 일치, 블록 뒤 가림(몬스터는 실루엣 없음), 피격 연출 | `data/combat.json`, `data/monsters.json` | ab95af2 |
