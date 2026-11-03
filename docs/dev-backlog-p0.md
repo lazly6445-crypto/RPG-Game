@@ -171,3 +171,5 @@
 - **B25 사양서 작성**: `isometric-transition-spec.md`(투영 2:1·타일 32×16·단차 8px [가정], 깊이 정렬, 화면 기준 이동, 역변환, 단계 B25a~e). 구현은 B25a부터 사용량 상태가 `allowed`일 때 시작.
 
 - **B25a 완료** (게임 PC 커밋 adeb32d, 푸시 안 함): `scripts/iso_projection.gd`(IsoProjection)·`data/iso.json`(enabled=false, 32×16, 단차 8px, 4방향, 화면 기준 입력 맵, 실루엣 alpha 0.5 — 전부 [가정])·`test_iso_projection.gd` 13개 PASS, 기존 테스트 전부 PASS. 타일 (tx,ty)는 [t−0.5,t+0.5)를 덮고 정수 좌표가 윗면 중심. pick은 max_h(8)부터 내려가며 검사. 사람 확인 없음.
+
+- **B25b 완료** (게임 PC 커밋 036686c, 푸시 안 함): `scenes/iso_terrain_view.tscn`+`iso_terrain_view.gd`+`test_iso_terrain_view.gd`(9개 PASS, 기존 46 PASS). tutorial 월드, Terrain/GridMover 그대로, 윗면+좌(밝음)/우(어두움) 옆면, 대각선(x+y)별 깊이 정렬, 가림 시 시안 실루엣, 마우스 pick 하이라이트, 프레임 ms 표시. 한계: 오르기/낙하 높이 보간 없음, tutorial만 확인. 가시 타일 705. **[사람 확인 대기]**
