@@ -33,3 +33,4 @@
 | B22 소지품·제작 UI | 본게임(`game.tscn`, F5) I / C 키 | I 소지품, C 제작, Enter/재클릭 제작, Esc 닫기, 설정→입력 탭에서 키 변경 | 목록 가독성, 사망 손실 표시(난이도별·던전 안), 비용 표시(보유/필요 색), 횃불 제작·재료 부족 사유, 폭파장치 "???", 메뉴/지도 충돌, 탑다운·아이소 둘 다 | `data/panels.json`, `data/input.json`, `data/recipes.json` | b6ebcc4 |
 | B26 시작 씬·높이 보간 | Godot 에디터 F5 (이제 game.tscn 직접 실행) | 아이소 활성 후 턱/계단 오르내리기 | F5로 게임이 바로 뜨는지, 오르기·낙하 높이 변화의 부드러움(0.1초 적당한지), 보간 중 가림·정렬 어색함 | `data/iso.json` `height_lerp` | be7a7ca |
 | B27 아이소 마우스 선택 | F5, `iso.json enabled:true` | 마우스 이동 후 Q 건축 / 우클릭 깎기 | 커서 아래 타일 하이라이트 정확도(높은 타일 포함), 3타일 경계 안=정상색·밖=빨강, 8방향 표시 | `data/iso.json` `reach_tiles`, `sprite_dirs` | f5f45fd |
+| B28 3타 콤보 | F5 (탑다운·아이소 둘 다) 또는 `combat_view`/`iso_combat_view` | 좌클릭 연타(1→2→3타), Space 회피 취소, 1~5 소환, H 판정 | 3타 템포·이어가기 0.25초, 3타 범위(반경 72·220°)와 후딜 0.55초, 처치 이펙트 크기·밀도, 다수 적 상황, 1타 부채꼴 판정감(사각형 복귀 여부) | `data/combat.json` (`attack`, `combo`, `kill_fx`) | 5b97f25 |
