@@ -34,3 +34,4 @@
 | B26 시작 씬·높이 보간 | Godot 에디터 F5 (이제 game.tscn 직접 실행) | 아이소 활성 후 턱/계단 오르내리기 | F5로 게임이 바로 뜨는지, 오르기·낙하 높이 변화의 부드러움(0.1초 적당한지), 보간 중 가림·정렬 어색함 | `data/iso.json` `height_lerp` | be7a7ca |
 | B27 아이소 마우스 선택 | F5, `iso.json enabled:true` | 마우스 이동 후 Q 건축 / 우클릭 깎기 | 커서 아래 타일 하이라이트 정확도(높은 타일 포함), 3타일 경계 안=정상색·밖=빨강, 8방향 표시 | `data/iso.json` `reach_tiles`, `sprite_dirs` | f5f45fd |
 | B28 3타 콤보 | F5 (탑다운·아이소 둘 다) 또는 `combat_view`/`iso_combat_view` | 좌클릭 연타(1→2→3타), Space 회피 취소, 1~5 소환, H 판정 | 3타 템포·이어가기 0.25초, 3타 범위(반경 72·220°)와 후딜 0.55초, 처치 이펙트 크기·밀도, 다수 적 상황, 1타 부채꼴 판정감(사각형 복귀 여부) | `data/combat.json` (`attack`, `combo`, `kill_fx`) | 5b97f25 |
+| B29 레벨·경험치 | F5 후 새 게임 | 몬스터 처치, I 소지품 | 레벨업 속도 체감, 체력 +1칸/5레벨·공격력 +4%/레벨 상승폭, HUD(Lv·경험치 바·하트 폭), 레벨업 연출, 저장→이어하기 유지, 리스폰 xp 파밍 허용 여부 | `data/level.json`, `data/monsters.json`(xp), `data/boss.json` | 29ac2aa |
