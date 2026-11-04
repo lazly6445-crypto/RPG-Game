@@ -188,3 +188,5 @@
 - **B23 보류:** 밸런스 보고 도구 — 난이도 방향 결정(129)으로 전제가 바뀌었고 수치는 사용자가 플레이 후 조정하므로 사용자 요청이 있을 때까지 보류.
 
 - **B26 완료** (게임 PC 커밋 be7a7ca, 푸시 안 함): ① **시작 씬 정정:** `scenes/main.tscn`은 흰 사각형 이동 확인용 옛 씬이고 game.tscn을 불러오지 않았다 → 이전까지 F5/`--path D:\gate-godot`로 실행하면 게임이 아니라 이 옛 씬이 떴다(**B22·B25d 검토 안내의 `main.tscn` 실행 지시는 잘못이었음, 검토 큐 수정함**). 참조처는 project.godot·ARCHITECTURE.md뿐이어서 `run/main_scene`을 `res://scenes/game.tscn`으로 변경, ARCHITECTURE.md 갱신. ② 아이소 높이 보간: `data/iso.json` `height_lerp {seconds:0.1, curve:smooth|linear}`([가정], 0이면 즉시), 표시 높이만 보간(플레이어·몬스터·보스·덩굴·경고 영역·실루엣), 논리 좌표·충돌·정렬 키·가림 판정은 논리 높이 유지(보간값으로 정렬하면 키가 타일 경계를 넘나들어 순서 역전 우려). 검증은 `iso_projection.gd validate`에 추가(렌더 파일 밖). 전체 52개 PASS, 시가지 normal 이동 평균 4.99ms(탑다운 4.56). 어제부터 멈춰 있던 `test_settings` 프로세스(PID 26296)를 종료함. **[사람 확인 대기]** 보간 체감, F5로 game.tscn 바로 뜨는지.
+
+- **결정 131: 스프라이트 8방향** — 게임 PC의 `data/iso.json sprite_dirs` 4→8 반영 필요(다음 게임 PC 작업에 포함).
