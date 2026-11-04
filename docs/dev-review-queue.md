@@ -35,3 +35,4 @@
 | B27 아이소 마우스 선택 | F5, `iso.json enabled:true` | 마우스 이동 후 Q 건축 / 우클릭 깎기 | 커서 아래 타일 하이라이트 정확도(높은 타일 포함), 3타일 경계 안=정상색·밖=빨강, 8방향 표시 | `data/iso.json` `reach_tiles`, `sprite_dirs` | f5f45fd |
 | B28 3타 콤보 | F5 (탑다운·아이소 둘 다) 또는 `combat_view`/`iso_combat_view` | 좌클릭 연타(1→2→3타), Space 회피 취소, 1~5 소환, H 판정 | 3타 템포·이어가기 0.25초, 3타 범위(반경 72·220°)와 후딜 0.55초, 처치 이펙트 크기·밀도, 다수 적 상황, 1타 부채꼴 판정감(사각형 복귀 여부) | `data/combat.json` (`attack`, `combo`, `kill_fx`) | 5b97f25 |
 | B29 레벨·경험치 | F5 후 새 게임 | 몬스터 처치, I 소지품 | 레벨업 속도 체감, 체력 +1칸/5레벨·공격력 +4%/레벨 상승폭, HUD(Lv·경험치 바·하트 폭), 레벨업 연출, 저장→이어하기 유지, 리스폰 xp 파밍 허용 여부 | `data/level.json`, `data/monsters.json`(xp), `data/boss.json` | 29ac2aa |
+| B38a 시가지 확장·군집·엘리트 | F5, 시가지 진입(새 게임) | 이동·전투, M 지도 | 216×216 탐험감(블록 단조로움), 대 군집(l1 (150,164), l2 (124,185)) 밀도, 엘리트 예고 표시·능력 체감, 지도, 컨테이너 54개 과다 여부, normal 186마리 규모 | `data/clusters.json`(cap), `data/elite.json`, `data/worlds/downtown_overrides.json` | 560cf5a, 1844c07 |
