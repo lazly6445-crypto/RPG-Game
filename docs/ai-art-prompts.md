@@ -19,3 +19,10 @@
 
 ## 걷기 애니메이션 요청 (단계 3)
 `walk cycle, 8 frames, loop, same character as reference, direction: south / south-east / east / north-east / north (5 directions, west-side directions will be mirrored)`
+
+
+## [채택] 기본 캐릭터 v1 프롬프트 (PixelLab, 결정 195)
+설정: Humanoid, v3, Low Top-Down, Sprite Size 56×56, Low detail, Black outline. **부정 표현(no backpack 등)은 해당 물건을 그리게 만들므로 쓰지 말고 긍정문으로만 쓴다.**
+```
+modern pixel art, isometric, chibi proportions, about 2.5 to 3 heads tall, oversized round head, very cute face, two small glossy black dot eyes with a tiny white highlight each, eyes set wide apart low on the face, no nose, tiny smiling mouth, soft pink blush on the cheeks, chubby short body, short stubby arms and legs, pure black outline 2px thick, bold clean black outline, warm low-saturation pastel palette dominated by beige and sage green, only about 24 colors, multi-step soft shading, light from top-left, no dithering. Young post-apocalyptic city survivor, contemporary clothing: faded sage green utility jacket open over a beige hoodie, a bright teal scarf clearly a different color from the green jacket, grey cargo pants with patches, worn lace-up combat boots, fingerless gloves. A small glowing teal crystal pendant hangs on a cord around the neck. Short rounded messy haircut with a small tuft on top. Arms relaxed at the sides, hands open. The jacket back is plain, smooth and clean, showing only the green fabric and the beige hood.
+```
