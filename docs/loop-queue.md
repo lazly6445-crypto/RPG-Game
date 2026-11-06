@@ -3,7 +3,7 @@
 운영 규칙: 자식 세션 1개씩 순차 실행(같은 폴더 충돌 방지). 완료 확인은 `Bash sleep 1500` 백그라운드로 깨어남(예약 알림 trigger는 ACCESS_DENIED로 실패하므로 사용 금지). 완료 시: 보고서 읽기 → dev-backlog-p0.md·dev-review-queue.md 기록 → push → 세션 보관 → 다음 세션 시작. 환경은 `env_01X9PQ75drBPfFJ9DfisAgyc`(PC 브리지). 자식 프롬프트에 AskUserQuestion 금지, 경로 지정 커밋, 푸시 금지 명시.
 
 ## 진행 중
-- B47 렌더 규격 전환(타일 64×32·내부 1280×720) — (시작 후 id 기록)
+- B47 렌더 규격 전환(타일 64×32·내부 1280×720) — session_0148ScBBG9cCiKumqtVthYEh
 - (완료: B46 b002155, B30d2 011e2d4, B42a 1bee406, B42b 8173021, 화풍 시안 687c8db)
 
 ## 대기 (순서)
