@@ -27,3 +27,9 @@
 - Spritesheets.ai: https://www.spritesheets.ai/free-ai-sprite-generator , https://www.spritecook.ai/compare/spritesheets-ai
 - SpriteCook: https://makeaigames.com/tools/spritecook , https://alternativeto.net/software/spritecook-ai/about/ , https://inite.ai/en/atlas/spritecook.ai
 - Scenario: https://www.scenario.com/pricing , https://help.scenario.com/articles/1129045411-frequently-asked-questions-faq , https://www.therundown.ai/tools/scenario , https://aitools.fyi/scenario
+
+
+## 시험 결과 갱신 (2026-11-06)
+- **PixelLab**: MCP 연결 성공(107 tools). 캐릭터 v3(64×64→56×56 설정) 8방향 품질 우수(코어 키퍼식 귀여운 치비형 채택). 애니메이션 비용(공식 가격표+실측): template 1/방향, skeleton-v3 3/방향(프레임 수 기준 3·8·15프레임 = 2·3·4), pro 10~25/방향. 걷기 6프레임 실측: template가 가장 걷기답고(눈·볼 색 번짐은 후처리 필요) skeleton-v3는 일관되지만 약함. 무료 체험 월 40 generations(남은 21), 동시 생성 1건. 캐릭터 다운로드 ZIP은 인증 없이 받을 수 있음.
+- **SpriteCook**: 호스팅 MCP(`https://mcp.spritecook.ai/mcp/claude`) + OAuth(키 불필요) + REST API(Bearer 키, 범위 generate/read_assets/read_credits). 4/8방향 지원 문서 없음, 비용표는 `GET /v1/api/models`. 연결/인증 진행 중(미시험).
+- **Scenario / Spritesheets.ai**: 미시험.
