@@ -7,7 +7,6 @@
 - (완료: B47 f01ab10, 아트 임포트 3e3e891, B46 b002155, B30d2 011e2d4, B42a 1bee406, B42b 8173021, 화풍 시안 687c8db)
 
 - 아트 자동화 시험(PixelLab MCP 연결 + 검수 스크립트, 걷기 A/B) — session_0148ScBAN6kSkKvqsGiJrSi3 (크레딧 상한 8 generations)
-- 아트 자동화 2(PixelLab: 걷기 7방향 + Idle 8방향 생성·임포트, 상한 16 generations) — session_0148ScB9eXh4p7mfHuncdbWu
 
 ## 대기 (순서)
 0. (완료) B47 렌더 규격 전환(결정 190)**: 타일 64×32·내부 1280×720·높이 단 16px, HUD/UI/글자/줌/카메라/마우스 변환/성능 재측정 (B46 완료 직후, 충돌 방지 위해 B34 앞). 이어서 C10(레이어 이름 정렬) 확인, B48 건물 가림(결정 191: 입장=페이드·실내 탐험=완전 제거).
@@ -32,3 +31,7 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 
 ## 아트 도구 시험 (사용자 진행, 결정 보류)
 - ai-art-test-plan.md 기준으로 PixelLab → SpriteCook → Scenario → Spritesheets.ai 순 시험 후 도구 결정. 결과 이미지는 `D:\gate-art-input\test_<도구>\`.
+
+## 상태 메모 (2026-11-07)
+- 사용자 PC 재부팅 → 브리지(Remote Control) 재시작 필요: `cd D:\gate-godot; & "C:\Users\User\.local\bin\claude.exe" remote-control`. 재연결 후 B41(session_0148ScBAoWj7wNiquxG5hp5e, 5시간 한도 + PC 종료로 중단, `aftershock.gd` 미추적 파일 존재) 재개: send_message로 이어서 진행.
+- PixelLab 잔액 7 generations. 다음 아트: 걷기 W·NW 재생성(2), correct_pixelart 시험(소액), idle 발 기준선 보정(임포트 도구), 몬스터(들개) 시험.
