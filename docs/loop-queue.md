@@ -7,8 +7,6 @@
 - (완료: B47 f01ab10, 아트 임포트 3e3e891, B46 b002155, B30d2 011e2d4, B42a 1bee406, B42b 8173021, 화풍 시안 687c8db)
 
 - 아트 자동화 시험(PixelLab MCP 연결 + 검수 스크립트, 걷기 A/B) — session_0148ScBAN6kSkKvqsGiJrSi3 (크레딧 상한 8 generations)
-- Art 5(프레임 자동 보정 도구: 마스터 팔레트 고정·스트레이 픽셀 제거·부위별 색 안정화, 크레딧 0) — session_0148ScB8XF7a2ugMu68Aj1wn
-- Art 6(고프레임 부드러운 애니메이션 방식 시험: 걷기 12~16프레임, 상한 60 generations) — session_0148ScB8dX9JP33uB323TPXz
 - Art 7(시가지 몬스터 3종 컨셉·후보·S방향 걷기/idle 시험, 상한 100; 선택지 시트 `D:\gate-shots\art\art7\choose\`) — session_0148ScBC9Wn17em3oJQ9bPWb
 
 ## 대기 (순서)
@@ -47,3 +45,5 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - PixelLab Tier 2 결제 완료(2026-11-07). 노출된 키 재발급 여부에 따라 MCP 키 재등록 필요.
 
 - PixelLab 동시 생성 상한 10건(확인). 잔액 4968.8(Art 4 후). 다음 아트: 자동 보정(Art 5) → 들개 몬스터 8방향 풀 파이프라인 실측.
+
+- 사용자 확인 대기: 고프레임 걷기 GIF 비교(`D:\gate-shots\art\art6\walk_*_16fps.gif`) → 방식 선택(pixminimax 16f 추천) 후 8방향 확장. ARCHITECTURE §32 절 번호 중복(Art 5·Art 6) 정리 필요.
