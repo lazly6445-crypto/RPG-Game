@@ -8,6 +8,7 @@
 
 - 아트 자동화 시험(PixelLab MCP 연결 + 검수 스크립트, 걷기 A/B) — session_0148ScBAN6kSkKvqsGiJrSi3 (크레딧 상한 8 generations)
 - Art 7(시가지 몬스터 3종 컨셉·후보·S방향 걷기/idle 시험, 상한 100; 선택지 시트 `D:\gate-shots\art\art7\choose\`) — session_0148ScBC9Wn17em3oJQ9bPWb
+- Art 8(주인공 걷기 pixminimax 16f 8방향 확장·루프 이음새·임포트, 상한 40) — (시작 후 id 기록)
 
 ## 대기 (순서)
 0. (완료) B47 렌더 규격 전환(결정 190)**: 타일 64×32·내부 1280×720·높이 단 16px, HUD/UI/글자/줌/카메라/마우스 변환/성능 재측정 (B46 완료 직후, 충돌 방지 위해 B34 앞). 이어서 C10(레이어 이름 정렬) 확인, B48 건물 가림(결정 191: 입장=페이드·실내 탐험=완전 제거).
