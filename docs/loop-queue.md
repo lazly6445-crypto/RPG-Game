@@ -1,9 +1,9 @@
 # 작업 루프 큐 (부모 세션 자체 점검용)
 
-운영 규칙: 자식 세션 1개씩 순차 실행(같은 폴더 충돌 방지). 완료 확인은 `Bash sleep 1500` 백그라운드로 깨어남(예약 알림 trigger는 ACCESS_DENIED로 실패하므로 사용 금지). 완료 시: 보고서 읽기 → dev-backlog-p0.md·dev-review-queue.md 기록 → push → 세션 보관 → 다음 세션 시작. 환경은 `env_01X9PQ75drBPfFJ9DfisAgyc`(PC 브리지). 자식 프롬프트에 AskUserQuestion 금지, 경로 지정 커밋, 푸시 금지 명시.
+운영 규칙: 자식 세션 1개씩 순차 실행(같은 폴더 충돌 방지). 완료 확인은 `Bash sleep 1500` 백그라운드로 깨어남(예약 알림 trigger는 ACCESS_DENIED로 실패하므로 사용 금지). 완료 시: 보고서 읽기 → dev-backlog-p0.md·dev-review-queue.md 기록 → push → 세션 보관 → 다음 세션 시작. 환경은 `env_01DjsxjYFxgCi9qFrgLT8tk9 (재부팅 후 새 브리지; 이전 env_01X9PQ75... 는 삭제됨, 브리지를 다시 시작할 때마다 list_environments로 새 id 확인)`(PC 브리지). 자식 프롬프트에 AskUserQuestion 금지, 경로 지정 커밋, 푸시 금지 명시.
 
 ## 진행 중
-- B41 여진(리셋) 시스템 — session_0148ScBAoWj7wNiquxG5hp5e
+- B41 여진(리셋) 시스템(재개; 이전 세션 상태 복구 불가, 작업 트리의 미커밋 변경을 이어받음) — session_0148ScBAygQTn2YsoTkjWawf
 - (완료: B47 f01ab10, 아트 임포트 3e3e891, B46 b002155, B30d2 011e2d4, B42a 1bee406, B42b 8173021, 화풍 시안 687c8db)
 
 - 아트 자동화 시험(PixelLab MCP 연결 + 검수 스크립트, 걷기 A/B) — session_0148ScBAN6kSkKvqsGiJrSi3 (크레딧 상한 8 generations)
