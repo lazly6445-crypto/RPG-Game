@@ -35,3 +35,8 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 ## 상태 메모 (2026-11-07)
 - 사용자 PC 재부팅 → 브리지(Remote Control) 재시작 필요: `cd D:\gate-godot; & "C:\Users\User\.local\bin\claude.exe" remote-control`. 재연결 후 B41(session_0148ScBAoWj7wNiquxG5hp5e, 5시간 한도 + PC 종료로 중단, `aftershock.gd` 미추적 파일 존재) 재개: send_message로 이어서 진행.
 - PixelLab 잔액 7 generations. 다음 아트: 걷기 W·NW 재생성(2), correct_pixelart 시험(소액), idle 발 기준선 보정(임포트 도구), 몬스터(들개) 시험.
+
+## 아트 품질 우선 작업 (결정 196)
+1. 검수 스크립트 강화: 얼굴 세부(눈·볼) 색 변화, 발 접지 타이밍, 후보 비교 선택 시트 자동 생성.
+2. 임포트 옵션: Aseprite 보정용 레이어/프레임 내보내기.
+3. PixelLab 결제 후: MCP 키 재등록 확인 → 걷기 W·NW 재생성, 색 번짐 후처리, 들개(몬스터) 1종 8방향 풀 품질 파이프라인 실측 → 견적 재계산 → 플랜(Tier 2 유지/상향) 결정.
