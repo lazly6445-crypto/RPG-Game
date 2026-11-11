@@ -60,3 +60,9 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 아트(PixelLab, 월 $50): 주인공 완성(걷기·idle·달리기·구르기·공격 3타·피격·사망·시전 12프레임+유형별 3), 시가지 몬스터 4종(들개·엘리트·곰·문지기) 8방향 풀 애니, 시가지 지형 타일·건물(반파)·오브젝트, 상인 3명(시가지), 아이템 아이콘 32/64, 스킬 이펙트 PixelLab VFX(결정 208), UI 종이·금속(결정 211), 음악·효과음(결정 212).
 - 콘텐츠: 시가지 퀘스트·기믹(49개 중 시가지 16), 곽두식·봉순·철민, 곰 대형 군집(결정 213).
 - 품질 게이트: 사용자 플레이테스트(로그 분석), 성능 ≤16.6ms, 검수.
+
+- **Art 9a(PC 연결 후 최우선)**: 주인공 걷기·달리기 '통통 튀는' 모션 재생성(결정 218). 후보 3단계(약/중/강) × 걷기 16f·달리기 16f를 S·E 방향으로 먼저 생성 → 선택지 시트(결정 202) → 사용자 선택 후 8방향 확장. 프롬프트 초안(영문, 긍정문): 
+  - 걷기: `bouncy cheerful chibi walk cycle, the whole body bobs up and down with a springy hop on every step, squash and stretch, body leaning slightly forward, head bouncing, arms swinging loosely, scarf and hair trailing behind and bouncing a beat later, feet landing clearly, lively and energetic`
+  - 달리기: `energetic bouncy run cycle, body leaning forward, long springy strides with a brief airborne moment between steps, big up and down bounce, squash on landing and stretch on takeoff, arms pumping, scarf streaming behind, hair bouncing, lively`
+  - 강도 변형: 약(`gentle bounce`), 중(`springy hop`), 강(`exaggerated bouncy hop with a clear airborne phase`).
+  - 데이터 보강: 프레임별 `oy`(상하 오프셋 1~2px) 곡선, 프레임당 시간 40~50ms(걷기), 달리기 35~45ms.
