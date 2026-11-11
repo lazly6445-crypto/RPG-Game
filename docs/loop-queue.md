@@ -1,6 +1,6 @@
 # 작업 루프 큐 (부모 세션 자체 점검용)
 
-운영 규칙: 자식 세션 1개씩 순차 실행(같은 폴더 충돌 방지). 완료 확인은 `Bash sleep 1500` 백그라운드로 깨어남(예약 알림 trigger는 ACCESS_DENIED로 실패하므로 사용 금지). 완료 시: 보고서 읽기 → dev-backlog-p0.md·dev-review-queue.md 기록 → push → 세션 보관 → 다음 세션 시작. 환경은 `env_01DjsxjYFxgCi9qFrgLT8tk9 (재부팅 후 새 브리지; 이전 env_01X9PQ75... 는 삭제됨, 브리지를 다시 시작할 때마다 list_environments로 새 id 확인)`(PC 브리지). 자식 프롬프트에 AskUserQuestion 금지, 경로 지정 커밋, 푸시 금지 명시.
+운영 규칙: 자식 세션 1개씩 순차 실행(같은 폴더 충돌 방지). 완료 확인은 `Bash sleep 1500` 백그라운드로 깨어남(예약 알림 trigger는 ACCESS_DENIED로 실패하므로 사용 금지). 완료 시: 보고서 읽기 → dev-backlog-p0.md·dev-review-queue.md 기록 → push → 세션 보관 → 다음 세션 시작. 환경은 `env_01Q4ett3G2vUfZ13ovD9yNC9 (2026-11-11 새 브리지; 이전 env_01Djsxj... 도 삭제됨; 이전 env_01X9PQ75... 는 삭제됨, 브리지를 다시 시작할 때마다 list_environments로 새 id 확인)`(PC 브리지). 자식 프롬프트에 AskUserQuestion 금지, 경로 지정 커밋, 푸시 금지 명시.
 
 ## 진행 중
 - B41 여진(리셋) 시스템(재개; 이전 세션 상태 복구 불가, 작업 트리의 미커밋 변경을 이어받음) — session_0148ScBAygQTn2YsoTkjWawf
@@ -70,3 +70,8 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - **B53 환경 연출(결정 219)**: 배경 서정·평화 효과 시스템 — 풀·나무·덩굴 흔들림(셰이더 또는 프레임), 물결, 떠다니는 입자(먼지·꽃가루·반딧불, 지역별 색: 시가지 베이지 먼지·경계지 청록 반짝임·요정숲 연두/보라 꽃가루), 구름 그림자, 빛줄기, 환경광(좌상단 따뜻한 햇빛), 아주 느린 움직임·낮은 대비. 성능 예산(아이소 요정숲 p99) 안에서. 설정에서 '환경 효과' 강도 옵션. 이 기준에서 어긋나는 현재 연출(거친 번쩍임·화면 흔들림 세기)도 점검.
 
 - **Art 9(수정, 결정 220)**: 몬스터 체급 재정의 반영 — 들개 DOG-C 소형 64 유지, 엘리트 BOSSDOG-A는 중형(1.25~1.5배, 128 캔버스에서 재생성 또는 확대 후 정리), **곰 GATEKEEPER-C는 대형(약 3배, 192~256 캔버스)로 재생성**, **문지기 GATEKEEPER-B는 보스(4~5배, 256 이상)로 재생성**. 게임 코드: `monsters.json`·`boss.json` 크기·히트박스·점유 칸 확대, 카메라/정렬/가림 점검(코드 세션 필요).
+
+## 진행 중 (2026-11-11, env_01Q4ett3G2vUfZ13ovD9yNC9)
+- B41 여진 재개 2 — session_0148ScBBje5ztuqHXUvZCJ18
+- Art 9a 통통 튀는 걷기·달리기 후보(S·E, 상한 60, 선택지 시트 `D:\gate-shots\art\art9a\choose\`) — session_0148ScBB7LXcna3BDgghzfT2
+- 사용자 대기: 몬스터 체급 반영 Art 9(곰 대형·문지기 보스 재생성) 시작 시점 결정, 걷기 GIF 확인(art8).
