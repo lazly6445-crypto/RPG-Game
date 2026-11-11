@@ -7,8 +7,6 @@
 - (완료: B47 f01ab10, 아트 임포트 3e3e891, B46 b002155, B30d2 011e2d4, B42a 1bee406, B42b 8173021, 화풍 시안 687c8db)
 
 - 아트 자동화 시험(PixelLab MCP 연결 + 검수 스크립트, 걷기 A/B) — session_0148ScBAN6kSkKvqsGiJrSi3 (크레딧 상한 8 generations)
-- Art 7(시가지 몬스터 3종 컨셉·후보·S방향 걷기/idle 시험, 상한 100; 선택지 시트 `D:\gate-shots\art\art7\choose\`) — session_0148ScBC9Wn17em3oJQ9bPWb
-- Art 8(주인공 걷기 pixminimax 16f 8방향 확장·루프 이음새·임포트, 상한 40) — session_0148ScB8oo35qXt5XAxGTKnM
 
 ## 대기 (순서)
 0. (완료) B47 렌더 규격 전환(결정 190)**: 타일 64×32·내부 1280×720·높이 단 16px, HUD/UI/글자/줌/카메라/마우스 변환/성능 재측정 (B46 완료 직후, 충돌 방지 위해 B34 앞). 이어서 C10(레이어 이름 정렬) 확인, B48 건물 가림(결정 191: 입장=페이드·실내 탐험=완전 제거).
@@ -48,3 +46,8 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - PixelLab 동시 생성 상한 10건(확인). 잔액 4968.8(Art 4 후). 다음 아트: 자동 보정(Art 5) → 들개 몬스터 8방향 풀 파이프라인 실측.
 
 - 사용자 확인 대기: 고프레임 걷기 GIF 비교(`D:\gate-shots\art\art6\walk_*_16fps.gif`) → 방식 선택(pixminimax 16f 추천) 후 8방향 확장. ARCHITECTURE §32 절 번호 중복(Art 5·Art 6) 정리 필요.
+
+## 상태 메모 (2026-11-11)
+- Art 7·Art 8 완료 기록. B41은 한도+PC 끊김으로 미완(미커밋 변경이 작업 트리에 있음) → 브리지 재연결 후 새 세션으로 이어받기(list_environments로 새 env id 확인).
+- 사용자 선택 대기: 몬스터 후보(들개/엘리트/대형 A·B·C, 대형=문지기 여부, 4족 64×64), 걷기 GIF 확인(art8).
+- PixelLab 잔액 약 4868.8(11-07 기준), 초기화 12-07.
