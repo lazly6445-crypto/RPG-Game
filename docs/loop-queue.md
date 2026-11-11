@@ -66,3 +66,5 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
   - 달리기: `energetic bouncy run cycle, body leaning forward, long springy strides with a brief airborne moment between steps, big up and down bounce, squash on landing and stretch on takeoff, arms pumping, scarf streaming behind, hair bouncing, lively`
   - 강도 변형: 약(`gentle bounce`), 중(`springy hop`), 강(`exaggerated bouncy hop with a clear airborne phase`).
   - 데이터 보강: 프레임별 `oy`(상하 오프셋 1~2px) 곡선, 프레임당 시간 40~50ms(걷기), 달리기 35~45ms.
+
+- **B53 환경 연출(결정 219)**: 배경 서정·평화 효과 시스템 — 풀·나무·덩굴 흔들림(셰이더 또는 프레임), 물결, 떠다니는 입자(먼지·꽃가루·반딧불, 지역별 색: 시가지 베이지 먼지·경계지 청록 반짝임·요정숲 연두/보라 꽃가루), 구름 그림자, 빛줄기, 환경광(좌상단 따뜻한 햇빛), 아주 느린 움직임·낮은 대비. 성능 예산(아이소 요정숲 p99) 안에서. 설정에서 '환경 효과' 강도 옵션. 이 기준에서 어긋나는 현재 연출(거친 번쩍임·화면 흔들림 세기)도 점검.
