@@ -86,3 +86,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 대기: smoke_bot_normal 조사 종료 후 (B52b 취소: 번역·폰트는 출시 준비 단계로 연기, 결정 227·228 정정). 이후 큐: B35 시가지 보스, B36 난이도, B32d 지형 스킬, B48 건물 가림, 아이소 성능, Art 11(곰·문지기).
 - 진행: Art 11(곰·문지기, 상한 190gen), test_smoke_bot_normal 조사. 다음 코드: B35 시가지 보스 2명(smoke 조사 후).
 - 변경: Art 11은 문지기만(120gen), Art 12 곰 재디자인 A/B/C 후보(40gen, 결정 229). 사용자가 `D:\gate-shots\art\art12\choose\`에서 곰 선택 필요.
+- 완료: Art 12(b2b6d77), 스모크 조사(원인 확정). 진행: Fix 스모크 봇, Art 11 문지기, Art 13 곰 C 3배 전 동작(상한 150gen).
