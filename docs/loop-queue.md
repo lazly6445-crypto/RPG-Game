@@ -82,3 +82,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 완료: Art 10(ab82db5, 들개 연결 완료·엘리트 스프라이트 임포트, 96gen). 진행: Art 10b(개 이동 재생성), B54(엘리트 연결 코드), B30d3. 확인 대기: `D:\gate-shots\art\art10\` 시트.
 - 자료 업로드: ref-vfx-map-design.md, ref-marketing-brief.md (design-conflicts §5 반영). B55 후보: 구조물×기믹 조합 라이브러리. 마케팅은 출시 준비기 별도 검토.
 - 완료: B30d3(ce26d21, 고유 무기36+슬롯풀28, 간헐 실패=테스트 방어막 롤, 전체 82 exit0, smoke_bot_normal 9분 타임아웃 미확인→B54 세션이 확인 중), Art 10b(96f933a, 개 이동 재생성 24gen). 사용자 검토 대기: ARCHITECTURE §41 고유 효과 표(이름·수치, 특히 dagger_t4·bow_t6·body_lastbreath·boots_afterimage·pistol_t6, stat형 7종), art10b 시트.
+- 완료: B54(cc322e0·56af3e9 엘리트 개 연결), B52(5216748, Loc 구조, 영어 초안 611/847, §42). 미해결: test_smoke_bot_normal 20분+ 미완료(조사 세션 진행). 사용자 검토 대기: 영어 초안 전체, 한글 폰트 번들 여부, 미번역 236건(고유효과128·퀘스트대사59·기믹이름49) 처리.
