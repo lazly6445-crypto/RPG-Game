@@ -72,6 +72,6 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - **Art 9(수정, 결정 220)**: 몬스터 체급 재정의 반영 — 들개 DOG-C 소형 64 유지, 엘리트 BOSSDOG-A는 중형(1.25~1.5배, 128 캔버스에서 재생성 또는 확대 후 정리), **곰 GATEKEEPER-C는 대형(약 3배, 192~256 캔버스)로 재생성**, **문지기 GATEKEEPER-B는 보스(4~5배, 256 이상)로 재생성**. 게임 코드: `monsters.json`·`boss.json` 크기·히트박스·점유 칸 확대, 카메라/정렬/가림 점검(코드 세션 필요).
 
 ## 진행 중 (2026-11-11, env_01Q4ett3G2vUfZ13ovD9yNC9)
-- B41 여진 재개 2 — session_0148ScBBje5ztuqHXUvZCJ18
 - Art 9a 통통 튀는 걷기·달리기 후보(S·E, 상한 60, 선택지 시트 `D:\gate-shots\art\art9a\choose\`) — session_0148ScBB7LXcna3BDgghzfT2
 - 사용자 대기: 몬스터 체급 반영 Art 9(곰 대형·문지기 보스 재생성) 시작 시점 결정, 걷기 GIF 확인(art8).
+- B41 완료(여진). 다음 코드 작업: B51 포만감 버프(결정 206), B52 다국어 구조(결정 214), B35 시가지 보스 2명, 몬스터 체급 반영(결정 220).
