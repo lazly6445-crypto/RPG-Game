@@ -80,3 +80,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 완료: B51(2f89497, 음식 9종, 테스트 73/74·test_equipment iso 간헐 실패 원인 미확인), Art 9c(1514339, FAIL 80→46, 수작업 5건 남음). 진행: Art 10(개, 약 95gen 예상), B30d3(+test_equipment 간헐 실패 조사).
 - 사용자 확인 대기: 음식 HUD 아이콘·수치 체감, art9c GIF/시트(`D:\gate-shots\art\art9c\`), Aseprite 수작업 5건(걷기 SW 눈 가림, 걷기 N·NW 스카프 꼬리, 달리기 N·NW 이음새, 걷기 NE·SE 접지, 재킷 빨간 패치).
 - 완료: Art 10(ab82db5, 들개 연결 완료·엘리트 스프라이트 임포트, 96gen). 진행: Art 10b(개 이동 재생성), B54(엘리트 연결 코드), B30d3. 확인 대기: `D:\gate-shots\art\art10\` 시트.
+- 자료 업로드: ref-vfx-map-design.md, ref-marketing-brief.md (design-conflicts §5 반영). B55 후보: 구조물×기믹 조합 라이브러리. 마케팅은 출시 준비기 별도 검토.
