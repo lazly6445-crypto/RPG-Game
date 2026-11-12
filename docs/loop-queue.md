@@ -87,3 +87,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 진행: Art 11(곰·문지기, 상한 190gen), test_smoke_bot_normal 조사. 다음 코드: B35 시가지 보스 2명(smoke 조사 후).
 - 변경: Art 11은 문지기만(120gen), Art 12 곰 재디자인 A/B/C 후보(40gen, 결정 229). 사용자가 `D:\gate-shots\art\art12\choose\`에서 곰 선택 필요.
 - 완료: Art 12(b2b6d77), 스모크 조사(원인 확정). 진행: Fix 스모크 봇, Art 11 문지기, Art 13 곰 C 3배 전 동작(상한 150gen).
+- 완료: Art 11 문지기(2888e4d, 3.85배, 81gen 추정, 결함: 이동 E·W 방향 이탈·공격 이펙트 색 불일치·body.png 117MB). 진행: B56 체급 연결(문지기 연결·체급 데이터·텍스처 메모리), Fix 스모크 봇, Art 13 곰. 사용자 확인 대기: `D:\gate-shots\art\art11\` 시트·GIF.
