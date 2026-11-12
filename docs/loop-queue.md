@@ -77,3 +77,5 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - B41 완료(여진). 다음 코드 작업: B51 포만감 버프(결정 206), B52 다국어 구조(결정 214), B35 시가지 보스 2명, 몬스터 체급 반영(결정 220).
 - 진행: Art 9b(주인공 걷기 B·달리기 B 8방향), B51 포만감 버프 — (시작 후 id 기록)
 - 완료: Art 9b(4169cef), 여진 흔들림 10초(912d54f). 진행: B51, Art 9c(결함 보정), Art 10(개 2종). B51 후 전체 스위트 5건 실패(test_game_state/loot_chest/shop/skills/gather) 재확인 필요.
+- 완료: B51(2f89497, 음식 9종, 테스트 73/74·test_equipment iso 간헐 실패 원인 미확인), Art 9c(1514339, FAIL 80→46, 수작업 5건 남음). 진행: Art 10(개, 약 95gen 예상), B30d3(+test_equipment 간헐 실패 조사).
+- 사용자 확인 대기: 음식 HUD 아이콘·수치 체감, art9c GIF/시트(`D:\gate-shots\art\art9c\`), Aseprite 수작업 5건(걷기 SW 눈 가림, 걷기 N·NW 스카프 꼬리, 달리기 N·NW 이음새, 걷기 NE·SE 접지, 재킷 빨간 패치).
