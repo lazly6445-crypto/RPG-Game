@@ -102,3 +102,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 완료: Art 15 시가지 지형 타일 1단계(§56 계획서 89f658d, §57 B안 타일 42장 7커밋; 75/100gen, 잔액 4268.8; tools/tile_balance.py 밝기 보정, 아이소 연결, 전체 스위트·스모크 PASS, 성능 영향 ≤3%, 탑다운 불변). 사용자 확인 대기: `D:\gate-shots\art\art15b\`(game\·mock\) — 흙 발자국 무늬 반복, 도로-보도 대비, 균열·웅덩이 밀도, 횡단보도·차선 위치, 실내 타일 비율, 외벽 페이드 후 실내 바닥(b_inside2.png). 알려진 한계: 잔해|흙·도로|잔디 직선 경계 눈에 띔(전이 타일 미구현), 물웅덩이는 시각 전용. 다음: 2단계 오브젝트, 3단계 반파 건물.
 - 시작: Art 16 시가지 오브젝트 1차 후보(상한 100gen) — session 예정 기록은 아래 id 참조.
 - 대기: 결정 244 타일 이음매 해소(오버레이+데칼) — Art 16c 종료 후 착수(코드 충돌 방지).
+- 동시 시작(아트 후보, 코드 연결 없음; 계획서는 art_plans/*.md 별도 파일, ARCHITECTURE 포인터는 부모가 후속 추가): Art 17 시가지 반파 건물 후보(session_0148ScBAjaq4nurnqcJ5z2VW, 120gen), Art 18 시가지 데칼 에셋(session_0148ScBC4D3Bty2FuSX7YfrE, 40gen), Art 19 경계지·요정숲 지형 타일(session_0148ScB9wKz7G1h2QjDuSAnf, 120gen). 진행 중: Art 16c(session_0148ScB88qyUjWoRD3QCHqBe) 종료 후 결정 244 오버레이+데칼 연결 코드 세션.
