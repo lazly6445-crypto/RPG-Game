@@ -109,3 +109,4 @@ review-queue 전체, skills-draft.md, 가정값 튜닝, 프로젝트 게이트(�
 - 진행: Art 21 2단계(슈퍼타일 연결, 무료 도구 결과; 1단계 0e1c54e·§63), Art 18b(데칼 PixelLab, 사용자 직접 승인 입력 대기 — session_0148ScB9omps8GFTvadVeeGD에 "art18b를 PixelLab으로, 상한 70gen으로 진행" 입력 필요).
 - 완료: Art 21 슈퍼타일 연속 패턴(0e1c54e·c4dd7e4, §63·§65; 무료 도구 tools/supertile.py, 4×4칸 슈퍼타일 18개, 월드 4×4 영역 해시, 회전 시 무늬 바뀜 허용, data/supertile.json on/off·종류별 폴백, test_supertile PASS, 스모크 3종 PASS, 성능 +0.5%, 텍스처 +3.9MB; 전체 스위트는 수정 후 부분 재실행만 — 다음 전체 실행에서 확인). 칸 마름모 체크무늬 소멸, 약점: dirt·grass 3~4칸 덩어리감, sidewalk 단조로움(큰 포장 단위·풀 무더기 사라짐), 도로 무늬 작은 x 위주. 사용자 확인: `D:\gate-shots\art\art21\`(cmp_*, game_rot0/1). PixelLab AI 보강은 승인 입력 시 가능(미실행).
 - 시작: Art 22 해상도·디테일 상향 타당성 조사+시제품(결정 246, 게임 전면 전환 없음).
+- 정정: 결정 246(해상도 상향) 철회, Art 22 중단. 결정 247: 저해상도 도트 유지 + 역동적·사실적 표현 강화.
